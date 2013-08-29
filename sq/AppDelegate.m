@@ -8,17 +8,46 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "ExteriorViewController.h"
+#import "InteriorViewController.h"
+#import "OptionsAccesoriesViewController.h"
+#import "SummaryViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /*
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    
     self.window.rootViewController = self.viewController;
+    
     [self.window makeKeyAndVisible];
+    */
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    
+    ExteriorViewController *evc = [[ExteriorViewController alloc] init];
+    InteriorViewController *ivc = [[InteriorViewController alloc] init];
+    OptionsAccesoriesViewController *oavc = [[OptionsAccesoriesViewController alloc] init];
+    SummaryViewController *svc = [[SummaryViewController alloc] init];
+    
+    [evc.tabBarItem setTitle:@"Exterior"];
+    [ivc.tabBarItem setTitle:@"Interior"];
+    [oavc.tabBarItem setTitle:@"Options & Accesories"];
+    [svc.tabBarItem setTitle:@"Summary"];
+    
+    [tbc setViewControllers:[NSArray arrayWithObjects:evc, ivc, oavc, svc, nil]];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    [self.window setRootViewController:tbc];
+    
     return YES;
 }
 
