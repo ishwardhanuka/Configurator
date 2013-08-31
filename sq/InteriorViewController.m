@@ -95,7 +95,7 @@
         else if([folder isEqualToString:@"Carbon Fibre"])
         {
             [self.imvCarbonFibre setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Carbon Fibre_",name,viewString];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Carbon Fibre Pack_Standard",name,viewString];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvCarbonFibre setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -131,7 +131,7 @@
         else if([folder isEqualToString:@"Facia"])
         {
             [self.imvFacia setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Facia_",name,viewString];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Facia_Piano Black",name,viewString];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvFacia setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -149,7 +149,7 @@
         else if([folder isEqualToString:@"Piano"])
         {
             [self.imvPiano setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Piano_",name,viewString];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Piano Black Pack_Standard",name,viewString];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvPiano setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -158,7 +158,7 @@
         else if([folder isEqualToString:@"Seat Inner"])
         {
             [self.imvSeatInner setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Seat Inner_",name,viewString];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Seat Inner_Obsidian Black",name,viewString];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvSeatInner setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -212,7 +212,7 @@
         else if([folder isEqualToString:@"Wheel"])
         {
             [self.imvWheel setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Wheel_",name,viewString];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Steering Wheel_Obsidian Black",name,viewString];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvWheel setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -276,7 +276,7 @@
         else if([folder isEqualToString:@"Outer Stitch"])
         {
             [self.imvOuterStitch setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Outer Stitch_",name,viewString];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Outer Stitch_Coarse_Chancellor Red",name,viewString];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvOuterStitch setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
