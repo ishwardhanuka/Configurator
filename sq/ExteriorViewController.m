@@ -41,6 +41,8 @@
 - (void)setCarName:(NSString*)carName
 {
     name = carName;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:carName forKey:@"SelectedCarName"];
 }
 
 - (void)setInitialImages
@@ -256,7 +258,7 @@
     {
         if([s hasPrefix:[NSString stringWithFormat:@"%@_%@",name,selectedFolder]])
         {
-            if(![s hasSuffix:@"thumb.jpg"])
+            if(![s hasSuffix:@"thumb.png"])
             {
                 if ([selectedFolder isEqualToString:@"Paint Colour"])
                 {
@@ -270,9 +272,6 @@
                         [s3 addObject:s];
                 }
                 else
-                    
-                
-                
                 [fileNames addObject:s];
             }
         }
@@ -395,7 +394,7 @@
         }
         
         NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
-        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
+        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.png",fileName]]];
     }
     
     return cell;
@@ -406,6 +405,9 @@
     
     if(tableView.tag == 1 && [selectedFolder isEqualToString:@"Paint Colour"])
     {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[self tableView:tableView titleForHeaderInSection:indexPath.section] forKey:[NSString stringWithFormat:@"%@ Category",selectedFolder]];
+        
         NSString *fileName;
         
         switch (indexPath.section) {
