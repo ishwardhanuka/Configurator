@@ -898,6 +898,20 @@
 		7343FC7117C87D5D00B7D109 /* rapids_int_2_Facia_Wood Mahogany.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC6C17C87D5D00B7D109 /* rapids_int_2_Facia_Wood Mahogany.png */; };
 		7343FC7217C87D5D00B7D109 /* rapids_int_2_Facia_Wood Tamoash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC6D17C87D5D00B7D109 /* rapids_int_2_Facia_Wood Tamoash.png */; };
 		7343FC7317C87D5D00B7D109 /* rapids_int_2_Facia_Wood Walnut.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC6E17C87D5D00B7D109 /* rapids_int_2_Facia_Wood Walnut.png */; };
+		7343FC9117C87DB900B7D109 /* rapids_int_2_Lower_Aurora Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7417C87DB900B7D109 /* rapids_int_2_Lower_Aurora Blue.png */; };
+		7343FC9217C87DB900B7D109 /* rapids_int_2_Lower_Baltic Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7517C87DB900B7D109 /* rapids_int_2_Lower_Baltic Blue.png */; };
+		7343FC9317C87DB900B7D109 /* rapids_int_2_Lower_Bitter Chocolate.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7617C87DB900B7D109 /* rapids_int_2_Lower_Bitter Chocolate.png */; };
+		7343FC9417C87DB900B7D109 /* rapids_int_2_Lower_Blue Haze.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7717C87DB900B7D109 /* rapids_int_2_Lower_Blue Haze.png */; };
+		7343FC9517C87DB900B7D109 /* rapids_int_2_Lower_Chainmail Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7817C87DB900B7D109 /* rapids_int_2_Lower_Chainmail Grey.png */; };
+		7343FC9617C87DB900B7D109 /* rapids_int_2_Lower_Chancellor Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7917C87DB900B7D109 /* rapids_int_2_Lower_Chancellor Red.png */; };
+		7343FC9717C87DB900B7D109 /* rapids_int_2_Lower_Chestnut Tan.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7A17C87DB900B7D109 /* rapids_int_2_Lower_Chestnut Tan.png */; };
+		7343FC9817C87DB900B7D109 /* rapids_int_2_Lower_Cream Truffle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7B17C87DB900B7D109 /* rapids_int_2_Lower_Cream Truffle.png */; };
+		7343FC9917C87DB900B7D109 /* rapids_int_2_Lower_Dark Mocha.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7C17C87DB900B7D109 /* rapids_int_2_Lower_Dark Mocha.png */; };
+		7343FC9A17C87DB900B7D109 /* rapids_int_2_Lower_Deep Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7D17C87DB900B7D109 /* rapids_int_2_Lower_Deep Purple.png */; };
+		7343FC9B17C87DB900B7D109 /* rapids_int_2_Lower_Eifel Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7E17C87DB900B7D109 /* rapids_int_2_Lower_Eifel Green.png */; };
+		7343FC9C17C87DB900B7D109 /* rapids_int_2_Lower_Falcon Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC7F17C87DB900B7D109 /* rapids_int_2_Lower_Falcon Grey.png */; };
+		7343FC9D17C87DB900B7D109 /* rapids_int_2_Lower_Galena Silver.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC8017C87DB900B7D109 /* rapids_int_2_Lower_Galena Silver.png */; };
+		7343FC9E17C87DB900B7D109 /* rapids_int_2_Lower_Ice Mocha.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC8117C87DB900B7D109 /* rapids_int_2_Lower_Ice Mocha.png */; };
 		7343FC9F17C87DB900B7D109 /* rapids_int_2_Lower_Iron Ore Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC8217C87DB900B7D109 /* rapids_int_2_Lower_Iron Ore Red.png */; };
 		7343FCA017C87DB900B7D109 /* rapids_int_2_Lower_Ivory.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC8317C87DB900B7D109 /* rapids_int_2_Lower_Ivory.png */; };
 		7343FCA117C87DB900B7D109 /* rapids_int_2_Lower_Lords Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7343FC8417C87DB900B7D109 /* rapids_int_2_Lower_Lords Red.png */; };
@@ -2618,6 +2632,20 @@
 		7343FC6C17C87D5D00B7D109 /* rapids_int_2_Facia_Wood Mahogany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Facia_Wood Mahogany.png"; sourceTree = "<group>"; };
 		7343FC6D17C87D5D00B7D109 /* rapids_int_2_Facia_Wood Tamoash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Facia_Wood Tamoash.png"; sourceTree = "<group>"; };
 		7343FC6E17C87D5D00B7D109 /* rapids_int_2_Facia_Wood Walnut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Facia_Wood Walnut.png"; sourceTree = "<group>"; };
+		7343FC7417C87DB900B7D109 /* rapids_int_2_Lower_Aurora Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Aurora Blue.png"; sourceTree = "<group>"; };
+		7343FC7517C87DB900B7D109 /* rapids_int_2_Lower_Baltic Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Baltic Blue.png"; sourceTree = "<group>"; };
+		7343FC7617C87DB900B7D109 /* rapids_int_2_Lower_Bitter Chocolate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Bitter Chocolate.png"; sourceTree = "<group>"; };
+		7343FC7717C87DB900B7D109 /* rapids_int_2_Lower_Blue Haze.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Blue Haze.png"; sourceTree = "<group>"; };
+		7343FC7817C87DB900B7D109 /* rapids_int_2_Lower_Chainmail Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Chainmail Grey.png"; sourceTree = "<group>"; };
+		7343FC7917C87DB900B7D109 /* rapids_int_2_Lower_Chancellor Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Chancellor Red.png"; sourceTree = "<group>"; };
+		7343FC7A17C87DB900B7D109 /* rapids_int_2_Lower_Chestnut Tan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Chestnut Tan.png"; sourceTree = "<group>"; };
+		7343FC7B17C87DB900B7D109 /* rapids_int_2_Lower_Cream Truffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Cream Truffle.png"; sourceTree = "<group>"; };
+		7343FC7C17C87DB900B7D109 /* rapids_int_2_Lower_Dark Mocha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Dark Mocha.png"; sourceTree = "<group>"; };
+		7343FC7D17C87DB900B7D109 /* rapids_int_2_Lower_Deep Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Deep Purple.png"; sourceTree = "<group>"; };
+		7343FC7E17C87DB900B7D109 /* rapids_int_2_Lower_Eifel Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Eifel Green.png"; sourceTree = "<group>"; };
+		7343FC7F17C87DB900B7D109 /* rapids_int_2_Lower_Falcon Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Falcon Grey.png"; sourceTree = "<group>"; };
+		7343FC8017C87DB900B7D109 /* rapids_int_2_Lower_Galena Silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Galena Silver.png"; sourceTree = "<group>"; };
+		7343FC8117C87DB900B7D109 /* rapids_int_2_Lower_Ice Mocha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Ice Mocha.png"; sourceTree = "<group>"; };
 		7343FC8217C87DB900B7D109 /* rapids_int_2_Lower_Iron Ore Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Iron Ore Red.png"; sourceTree = "<group>"; };
 		7343FC8317C87DB900B7D109 /* rapids_int_2_Lower_Ivory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rapids_int_2_Lower_Ivory.png; sourceTree = "<group>"; };
 		7343FC8417C87DB900B7D109 /* rapids_int_2_Lower_Lords Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rapids_int_2_Lower_Lords Red.png"; sourceTree = "<group>"; };
@@ -4548,6 +4576,20 @@
 				738C725117C4E5EF0068F492 /* rapids_int_Lower_Blue Haze.png */,
 				738C725217C4E5EF0068F492 /* rapids_int_Lower_Bitter Chocolate.png */,
 				738C725317C4E5EF0068F492 /* rapids_int_Lower_Aurora Blue.png */,
+				7343FC7417C87DB900B7D109 /* rapids_int_2_Lower_Aurora Blue.png */,
+				7343FC7517C87DB900B7D109 /* rapids_int_2_Lower_Baltic Blue.png */,
+				7343FC7617C87DB900B7D109 /* rapids_int_2_Lower_Bitter Chocolate.png */,
+				7343FC7717C87DB900B7D109 /* rapids_int_2_Lower_Blue Haze.png */,
+				7343FC7817C87DB900B7D109 /* rapids_int_2_Lower_Chainmail Grey.png */,
+				7343FC7917C87DB900B7D109 /* rapids_int_2_Lower_Chancellor Red.png */,
+				7343FC7A17C87DB900B7D109 /* rapids_int_2_Lower_Chestnut Tan.png */,
+				7343FC7B17C87DB900B7D109 /* rapids_int_2_Lower_Cream Truffle.png */,
+				7343FC7C17C87DB900B7D109 /* rapids_int_2_Lower_Dark Mocha.png */,
+				7343FC7D17C87DB900B7D109 /* rapids_int_2_Lower_Deep Purple.png */,
+				7343FC7E17C87DB900B7D109 /* rapids_int_2_Lower_Eifel Green.png */,
+				7343FC7F17C87DB900B7D109 /* rapids_int_2_Lower_Falcon Grey.png */,
+				7343FC8017C87DB900B7D109 /* rapids_int_2_Lower_Galena Silver.png */,
+				7343FC8117C87DB900B7D109 /* rapids_int_2_Lower_Ice Mocha.png */,
 				7343FC8217C87DB900B7D109 /* rapids_int_2_Lower_Iron Ore Red.png */,
 				7343FC8317C87DB900B7D109 /* rapids_int_2_Lower_Ivory.png */,
 				7343FC8417C87DB900B7D109 /* rapids_int_2_Lower_Lords Red.png */,
@@ -7292,6 +7334,20 @@
 				7343FC7117C87D5D00B7D109 /* rapids_int_2_Facia_Wood Mahogany.png in Resources */,
 				7343FC7217C87D5D00B7D109 /* rapids_int_2_Facia_Wood Tamoash.png in Resources */,
 				7343FC7317C87D5D00B7D109 /* rapids_int_2_Facia_Wood Walnut.png in Resources */,
+				7343FC9117C87DB900B7D109 /* rapids_int_2_Lower_Aurora Blue.png in Resources */,
+				7343FC9217C87DB900B7D109 /* rapids_int_2_Lower_Baltic Blue.png in Resources */,
+				7343FC9317C87DB900B7D109 /* rapids_int_2_Lower_Bitter Chocolate.png in Resources */,
+				7343FC9417C87DB900B7D109 /* rapids_int_2_Lower_Blue Haze.png in Resources */,
+				7343FC9517C87DB900B7D109 /* rapids_int_2_Lower_Chainmail Grey.png in Resources */,
+				7343FC9617C87DB900B7D109 /* rapids_int_2_Lower_Chancellor Red.png in Resources */,
+				7343FC9717C87DB900B7D109 /* rapids_int_2_Lower_Chestnut Tan.png in Resources */,
+				7343FC9817C87DB900B7D109 /* rapids_int_2_Lower_Cream Truffle.png in Resources */,
+				7343FC9917C87DB900B7D109 /* rapids_int_2_Lower_Dark Mocha.png in Resources */,
+				7343FC9A17C87DB900B7D109 /* rapids_int_2_Lower_Deep Purple.png in Resources */,
+				7343FC9B17C87DB900B7D109 /* rapids_int_2_Lower_Eifel Green.png in Resources */,
+				7343FC9C17C87DB900B7D109 /* rapids_int_2_Lower_Falcon Grey.png in Resources */,
+				7343FC9D17C87DB900B7D109 /* rapids_int_2_Lower_Galena Silver.png in Resources */,
+				7343FC9E17C87DB900B7D109 /* rapids_int_2_Lower_Ice Mocha.png in Resources */,
 				7343FC9F17C87DB900B7D109 /* rapids_int_2_Lower_Iron Ore Red.png in Resources */,
 				7343FCA017C87DB900B7D109 /* rapids_int_2_Lower_Ivory.png in Resources */,
 				7343FCA117C87DB900B7D109 /* rapids_int_2_Lower_Lords Red.png in Resources */,
