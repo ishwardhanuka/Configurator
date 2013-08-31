@@ -16,7 +16,6 @@
     
     bool isMenuHidden;
     
-    NSString *viewString;
     NSMutableArray *s1, *s2;
     NSMutableArray *contemporary, *fastTrack;
 }
@@ -64,13 +63,10 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *imvSeatAccent;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *imvSeatAccentStitch;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *imvSeatStitch;
-- (IBAction)switchView:(id)sender;
 
 
-- (IBAction)loadV8:(id)sender;
-- (IBAction)loadDb9:(id)sender;
+
 - (IBAction)btnPressedMenu:(id)sender;
-- (IBAction)loadRapids:(id)sender;
 
 
 

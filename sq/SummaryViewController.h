@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface SummaryViewController : UIViewController<MFMailComposeViewControllerDelegate,UIAlertViewDelegate>
+@interface SummaryViewController : UIViewController<MFMailComposeViewControllerDelegate>
 {
     int lastExtLabel_Y;
     double exteriorPrice;
@@ -21,7 +21,6 @@
     NSArray *oaFolderList;
     NSString *pdfFilePath;
     NSMutableData *jsonData;
-    NSString *name;
 }
 
 extern int const LINESPACE;
