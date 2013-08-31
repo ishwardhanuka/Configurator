@@ -236,7 +236,6 @@ int const LINESPACE = 25;
         NSLog(@"int %i : %@", i, [intFolderList objectAtIndex:i]);
     }
 }
-
 - (void)setInteriorFileLabel
 {
     NSMutableArray *intFile = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"interiorFiles"]];
@@ -307,7 +306,7 @@ int const LINESPACE = 25;
     NSLog(@"int count : %i", [intFolderList count]);
     NSString *isAdded;
     int count = 0;
-    for (int i = 0; i < [intFolderList count]; i++)
+    for (int i = 0; i < [oaFile count]; i++)
     {
         UILabel *label;
         isAdded = [oaFile objectAtIndex:i];
@@ -469,6 +468,7 @@ int const LINESPACE = 25;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self getName];
     oaFolderList = [NSArray arrayWithObjects:@"Rapide S Embrogery",
                     @"Badge Seat Embrodery",
                     @"Personal Sill Plaque",
@@ -510,14 +510,6 @@ int const LINESPACE = 25;
     quatationLabel.font = [UIFont boldSystemFontOfSize:20.0f];
     [self.scrollView addSubview:quatationLabel];
     
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, 200, 20)];
-    [nameLabel setText:@"Name of Customer"];
-    [self.scrollView addSubview:nameLabel];
-    
-    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 140, 200, 20)];
-    [dateLabel setText:@"Date"];
-    [self.scrollView addSubview:dateLabel];
-    
     //[self setInteriorFolderLabel];
     //[self setInteriorFileLabel];
     
@@ -541,6 +533,12 @@ int const LINESPACE = 25;
     
     //[self setOptionsAccessoriesFolderLabel];
     //[self setOptionsAccessoriesFileLabel];
+    for(UIView *view in [self.scrollView subviews])
+        [view removeFromSuperview];
+    
+    UIImageView *iv = [[UIImageView alloc]initWithFrame:CGRectMake(400, 10, 200, 100)];
+    [iv setImage:[UIImage imageNamed:@"aml_logo_96"]];
+    [self.scrollView addSubview:iv];
 }
 
 - (void)didReceiveMemoryWarning
@@ -851,7 +849,32 @@ int const LINESPACE = 25;
     return partPrice;
     
 }
-
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if([title isEqualToString:@"OK"])
+    {
+        UITextField *username = [alertView textFieldAtIndex:0];
+        name = [username text];
+    }
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, 500, 20)];
+    [nameLabel setText:[NSString stringWithFormat:@"Name of Customer: %@",name]];
+    [self.scrollView addSubview:nameLabel];
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    [df setDateFormat:@"dd MMM yyyy"];
+    
+    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 140, 200, 20)];
+    [dateLabel setText:[NSString stringWithFormat:@"Date: %@",[df stringFromDate:[NSDate date]]]];
+    [self.scrollView addSubview:dateLabel];
+}
+-(void)getName
+{
+    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Name" message:@"Please enter your name:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    av.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [av setDelegate:self];
+    [av show];
+}
 -(double)getCarBasePrice{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *selectedCar = [defaults stringForKey:@"SelectedCarName"];
