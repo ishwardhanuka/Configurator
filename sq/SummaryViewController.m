@@ -378,9 +378,7 @@ int const LINESPACE = 25;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *selectedCarJSON;
     NSString *selectedCar = [defaults stringForKey:@"SelectedCarName"];
-    if([selectedCar isEqualToString:@"rapids"]){
-        selectedCarJSON = [defaults objectForKey:@"RapideS"];
-    }
+        selectedCarJSON = [defaults objectForKey:selectedCar];
     UILabel *label;
     double partPrice = 0.0;
     
@@ -789,9 +787,8 @@ int const LINESPACE = 25;
     NSDictionary *selectedCarJSON;
     double partPrice = 0.0;
     NSDictionary *partChild;
-    if([selectedCar isEqualToString:@"rapids"]){
-        selectedCarJSON = [defaults objectForKey:@"RapideS"];
-    }
+        selectedCarJSON = [defaults objectForKey:selectedCar];
+    
     if([categoryName isEqualToString:@"Paint Colour"]){
         partChild = [selectedCarJSON valueForKey:@"Ext Paint Color"];
         if([categoryValue isEqualToString:@"Specials"])
@@ -822,9 +819,7 @@ int const LINESPACE = 25;
     NSDictionary *selectedCarJSON;
     double partPrice = 0.0;
     NSDictionary *partChild;
-    if([selectedCar isEqualToString:@"rapids"]){
-        selectedCarJSON = [defaults objectForKey:@"RapideS"];
-    }
+        selectedCarJSON = [defaults objectForKey:selectedCar];
     if ([detailName isEqualToString:@"Wheel Type"]){
         partChild = [selectedCarJSON valueForKey:@"Wheel Type"];
         partPrice = [[partChild valueForKey:detailValue]doubleValue];
@@ -880,10 +875,9 @@ int const LINESPACE = 25;
     NSString *selectedCar = [defaults stringForKey:@"SelectedCarName"];
     NSDictionary *selectedCarJSON;
     double basePrice = 0.0;
-    if([selectedCar isEqualToString:@"rapids"]){
-        selectedCarJSON = [defaults objectForKey:@"RapideS"];
+        selectedCarJSON = [defaults objectForKey:selectedCar];
         basePrice = [[selectedCarJSON valueForKey:@"Base"]doubleValue];
-    }
+    
     return basePrice;
 }
 

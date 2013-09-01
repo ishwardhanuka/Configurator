@@ -54,7 +54,7 @@
 {
     //background.png, base.png, carshadow.png, shadow.png
     
-    folderList = [NSArray arrayWithObjects:@"Paint Colour", @"Wheel Type", @"Caliper Colour", nil];
+    folderList = [NSArray arrayWithObjects:@"Paint Colour", @"Wheel Type", @"Caliper Colour",@"Carbon Fibre", nil];
     
     //folderList = [NSArray arrayWithObjects:@"Base", @"Caliper Colour", @"Carbon Fibre", @"Paint Colour", @"Shadow",@"Wheel Type", nil];
     
@@ -262,7 +262,7 @@
     {
         if([s hasPrefix:[NSString stringWithFormat:@"%@_ext_%@",name,selectedFolder]])
         {
-            if(![s hasSuffix:@"thumb.png"])
+            if(![s hasSuffix:@"thumb.png"] && ![s hasSuffix:@"thumb.jpg"])
             {
                 if ([selectedFolder isEqualToString:@"Paint Colour"])
                 {

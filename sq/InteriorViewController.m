@@ -37,7 +37,7 @@
 - (void)setFirstTableDataSource:(NSArray*)folderList
 {
     if([name isEqualToString:@"RapideS"])
-        folderList = [NSArray arrayWithObjects:@"Upper", @"Lower", @"Upper IP", @"Upper Stitch", @"Lower Stitch", @"Seat Inner", @"Seat Outer", @"Outer Stitch", @"Door", @"Carbon Fibre", @"Piano Black Pack", @"Facia", @"Wheel", @"Carpet", nil];
+        folderList = [NSArray arrayWithObjects:@"Upper", @"Lower", @"Upper IP", @"Upper Stitch", @"Lower Stitch", @"Seat Inner", @"Seat Outer", @"Outer Stitch", @"Door Inserts", @"Carbon Fibre Pack", @"Piano Black Pack", @"Facia", @"Steering Wheel", @"Carpet", nil];
     /*
      UPPER
      LOWER
@@ -92,7 +92,7 @@
             [self.imvBackground setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
         }
-        else if([folder isEqualToString:@"Carbon Fibre"])
+        else if([folder isEqualToString:@"Carbon Fibre Pack"])
         {
             [self.imvCarbonFibre setHidden:NO];
             beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Carbon Fibre Pack_Standard",name,viewString];
@@ -119,10 +119,10 @@
             [self.imvCarpet setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
         }
-        else if([folder isEqualToString:@"Door"])
+        else if([folder isEqualToString:@"Door Inserts"])
         {
             [self.imvDoor setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Door_",name,viewString];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Door Inserts_",name,viewString];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvDoor setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -146,7 +146,7 @@
             [self.imvLower setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
         }
-        else if([folder isEqualToString:@"Piano"])
+        else if([folder isEqualToString:@"Piano Black Pack"])
         {
             [self.imvPiano setHidden:NO];
             beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Piano Black Pack_Standard",name,viewString];
@@ -209,7 +209,7 @@
             [self.imvUpperIP setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
         }
-        else if([folder isEqualToString:@"Wheel"])
+        else if([folder isEqualToString:@"Steering Wheel"])
         {
             [self.imvWheel setHidden:NO];
             beginsWithRequirement = [NSString stringWithFormat:@"%@_int%@_Steering Wheel_Obsidian Black",name,viewString];
@@ -382,7 +382,7 @@
     }
     
     
-    if([name isEqualToString:@"rapids"]){
+    if([name isEqualToString:@"RapideS"]){
         [[NSUserDefaults standardUserDefaults] setObject:arrayFiles forKey:@"interiorFiles"];
         [defaults synchronize];
     }
@@ -393,7 +393,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setCarName:@"rapids" :@"1"];
+    [self setCarName:@"RapideS" :@"1"];
     viewString = @"";
     contemporary = [[NSMutableArray alloc] initWithObjects:@"AURORA BLUE", @"BITTER CHOCOLATE", @"BLUE HAZE", @"CHANCELLOR RED", @"CHESTNUT TAN", @"CREAM TRUFFLE", @"DEEP PURPLE", @"EIFEL GREEN", @"FALCON GREY", @"GALENA SILVER", @"ICE MOCHA", @"IVORY", @"LORDS RED", @"MADAGASCAR ORANGE", @"MOONSHADOW", @"PURE BLACK", @"SAHARA TAN", @"SANDSTORM", @"SPECTRAL BLUE", @"TUSCAN TAN", @"WINTER WHEAT", nil];
     
@@ -429,7 +429,7 @@
         {
             if(![s hasSuffix:@"thumb.jpg"])
             {
-                if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"])){
+                if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"])){
                     NSString *colorName = [[s componentsSeparatedByString:@"_"]lastObject];
                     
                     if([contemporary containsObject:[[colorName substringToIndex:[colorName length]-4] uppercaseString]])
@@ -446,7 +446,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
+    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
     {
         switch (section) {
             case 0:
@@ -464,7 +464,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
+    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
         return 2;
     else return 1;
 }
@@ -472,7 +472,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
+    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
     {
         switch (section) {
             case 0:
@@ -522,7 +522,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //NSMutableArray *intFile = [[defaults objectForKey:@"interiorFiles"] mutableCopy];
     
-    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
+    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
     {
         NSString *fullString;
         
@@ -585,7 +585,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
+    if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
     {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:[self tableView:tableView titleForHeaderInSection:indexPath.section] forKey:[NSString stringWithFormat:@"%@ Category",selectedFolder]];
