@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12E55</string>
+		<string key="IBDocument.SystemVersion">12E3067</string>
 		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.39</string>
 		<string key="IBDocument.HIToolboxVersion">626.00</string>
@@ -2076,8 +2076,8 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="background.png">{2048, 1536}</string>
-			<string key="rapids_Base_shadow.png">{2048, 1536}</string>
-			<string key="rapids_Shadow_carshadow.png">{2048, 1536}</string>
+			<string key="rapids_Base_shadow.png">{16, 16}</string>
+			<string key="rapids_Shadow_carshadow.png">{16, 16}</string>
 			<string key="v12_Base_base.png">{1490, 725}</string>
 			<string key="v12_Caliper Colour_black_0.png">{1490, 725}</string>
 			<string key="v12_Carbon Fibre_carbonpack_0.png">{1490, 725}</string>

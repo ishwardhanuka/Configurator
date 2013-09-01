@@ -36,7 +36,7 @@
 
 - (void)setFirstTableDataSource:(NSArray*)folderList
 {
-    if([name isEqualToString:@"rapids"])
+    if([name isEqualToString:@"RapideS"])
         folderList = [NSArray arrayWithObjects:@"Upper", @"Lower", @"Upper IP", @"Upper Stitch", @"Lower Stitch", @"Seat Inner", @"Seat Outer", @"Outer Stitch", @"Door", @"Carbon Fibre", @"Piano Black Pack", @"Facia", @"Wheel", @"Carpet", nil];
     /*
      UPPER

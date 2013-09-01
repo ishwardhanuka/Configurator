@@ -91,7 +91,7 @@
         else if([folder isEqualToString:@"Caliper Colour"])
         {
             [self.imvCaliperColour setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_Caliper Colour_",name];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_ext_Brake Calipers_Red",name];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvCaliperColour setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -100,7 +100,7 @@
         else if([folder isEqualToString:@"Carbon Fibre"])
         {
             [self.imvCarbonFibre setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_Carbon Fibre_",name];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_ext_Carbon Fibre_Carbon Fibre",name];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvCarbonFibre setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -136,7 +136,7 @@
         else if([folder isEqualToString:@"Paint Colour"])
         {
             [self.imvPaintColour setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_Paint Colour_",name];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_ext_Paint Colour_Volcano Red",name];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvPaintColour setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -163,7 +163,7 @@
         else if([folder isEqualToString:@"Wheel Type"])
         {
             [self.imvWheelType setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_Wheel Type_",name];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_ext_Wheel Type_10-Spoke Silver",name];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvWheelType setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -181,13 +181,13 @@
     }
     
     [self.imvBase setHidden:NO];
-    beginsWithRequirement = [NSString stringWithFormat:@"%@_Base_",name];
+    beginsWithRequirement = [NSString stringWithFormat:@"%@_base",name];
     predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
     subArray = [directoryContents filteredArrayUsingPredicate:predicate];
     [self.imvBase setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
     
     [self.imvShadow setHidden:NO];
-    beginsWithRequirement = [NSString stringWithFormat:@"%@_Shadow_",name];
+    beginsWithRequirement = [NSString stringWithFormat:@"%@_shadow",name];
     predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
     subArray = [directoryContents filteredArrayUsingPredicate:predicate];
     [self.imvShadow setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
@@ -207,7 +207,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self setCarName:@"rapids"];
+    [self setCarName:@"RapideS"];
     
     contemporary = [[NSMutableArray alloc]initWithObjects: @"AMETHYST RED", @"APPLETREE GREEN", @"COBALT BLUE", @"CONCOURS BLUE", @"RED LION", @"GREY BULL", @"HAMMERHEAD SILVER", @"HARDLY GREEN", @"SELENE BRONZE", @"LIGHTNING SILVER", @"MADAGASCAR ORANGE", @"MAKO BLUE", @"MARIANA BLUE", @"MARRON BLACK", @"QUANTUM SILVER", @"SILVER BLONDE", @"STRATUS WHITE", @"VIRIDIAN GREEN", nil];
     
@@ -251,12 +251,16 @@
     NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
     fileNames = [[NSMutableArray alloc]init];
     
+    s1 = [[NSMutableArray alloc]init];
+    s2 = [[NSMutableArray alloc]init];
+    s3 = [[NSMutableArray alloc]init];
+    
     NSError * error;
     NSArray * directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:resourcePath error:&error];
     
     for (NSString *s in directoryContents)
     {
-        if([s hasPrefix:[NSString stringWithFormat:@"%@_%@",name,selectedFolder]])
+        if([s hasPrefix:[NSString stringWithFormat:@"%@_ext_%@",name,selectedFolder]])
         {
             if(![s hasSuffix:@"thumb.png"])
             {
@@ -333,6 +337,10 @@
         }
         return [fileNames count];
     }
+    
+    if(tableView.tag == 1)
+        return [fileNames count];
+    
     else
     {
         return [arrayFirstTableView count];
