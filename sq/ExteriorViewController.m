@@ -402,7 +402,7 @@
         }
         
         NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
-        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.png",fileName]]];
+        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
     }
     
     return cell;

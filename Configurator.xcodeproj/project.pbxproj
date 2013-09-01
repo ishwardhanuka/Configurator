@@ -919,11 +919,11 @@
 		7D7ED96817D244A8003761E4 /* RapideS_ext_Paint Colour_Tungsten Silver.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED94A17D244A8003761E4 /* RapideS_ext_Paint Colour_Tungsten Silver.png */; };
 		7D7ED96917D244A8003761E4 /* RapideS_ext_Paint Colour_Viridian Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED94B17D244A8003761E4 /* RapideS_ext_Paint Colour_Viridian Green.png */; };
 		7D7ED96A17D244A8003761E4 /* RapideS_ext_Paint Colour_Volcano Red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED94C17D244A8003761E4 /* RapideS_ext_Paint Colour_Volcano Red.png */; };
-		7D7ED97217D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Polished.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED96D17D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Polished.jpg */; };
-		7D7ED97317D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Silver.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED96E17D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Silver.jpg */; };
-		7D7ED97417D245D1003761E4 /* RapideS_ext_Thumbnail_20-Spoke Polished.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED96F17D245D1003761E4 /* RapideS_ext_Thumbnail_20-Spoke Polished.jpg */; };
-		7D7ED97517D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED97017D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Black.jpg */; };
-		7D7ED97617D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Silver.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED97117D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Silver.jpg */; };
+		7D7ED97217D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED96D17D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished_thumb.jpg */; };
+		7D7ED97317D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED96E17D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver_thumb.jpg */; };
+		7D7ED97417D245D1003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED96F17D245D1003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished_thumb.jpg */; };
+		7D7ED97517D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Black_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED97017D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Black_thumb.jpg */; };
+		7D7ED97617D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Silver_thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED97117D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Silver_thumb.jpg */; };
 		7D7ED97C17D245F5003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED97717D245F5003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished.png */; };
 		7D7ED97D17D245F5003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED97817D245F5003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver.png */; };
 		7D7ED97E17D245F5003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED97917D245F5003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished.png */; };
@@ -2319,11 +2319,11 @@
 		7D7ED94A17D244A8003761E4 /* RapideS_ext_Paint Colour_Tungsten Silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_ext_Paint Colour_Tungsten Silver.png"; sourceTree = "<group>"; };
 		7D7ED94B17D244A8003761E4 /* RapideS_ext_Paint Colour_Viridian Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_ext_Paint Colour_Viridian Green.png"; sourceTree = "<group>"; };
 		7D7ED94C17D244A8003761E4 /* RapideS_ext_Paint Colour_Volcano Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_ext_Paint Colour_Volcano Red.png"; sourceTree = "<group>"; };
-		7D7ED96D17D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Polished.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Thumbnail_10-Spoke Polished.jpg"; sourceTree = "<group>"; };
-		7D7ED96E17D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Silver.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Thumbnail_10-Spoke Silver.jpg"; sourceTree = "<group>"; };
-		7D7ED96F17D245D1003761E4 /* RapideS_ext_Thumbnail_20-Spoke Polished.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Thumbnail_20-Spoke Polished.jpg"; sourceTree = "<group>"; };
-		7D7ED97017D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Thumbnail_Multi-Spoke Black.jpg"; sourceTree = "<group>"; };
-		7D7ED97117D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Silver.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Thumbnail_Multi-Spoke Silver.jpg"; sourceTree = "<group>"; };
+		7D7ED96D17D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Wheel Type_10-Spoke Polished_thumb.jpg"; sourceTree = "<group>"; };
+		7D7ED96E17D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Wheel Type_10-Spoke Silver_thumb.jpg"; sourceTree = "<group>"; };
+		7D7ED96F17D245D1003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Wheel Type_20-Spoke Polished_thumb.jpg"; sourceTree = "<group>"; };
+		7D7ED97017D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Black_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Wheel Type_Multi-Spoke Black_thumb.jpg"; sourceTree = "<group>"; };
+		7D7ED97117D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Silver_thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "RapideS_ext_Wheel Type_Multi-Spoke Silver_thumb.jpg"; sourceTree = "<group>"; };
 		7D7ED97717D245F5003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_ext_Wheel Type_10-Spoke Polished.png"; sourceTree = "<group>"; };
 		7D7ED97817D245F5003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_ext_Wheel Type_10-Spoke Silver.png"; sourceTree = "<group>"; };
 		7D7ED97917D245F5003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_ext_Wheel Type_20-Spoke Polished.png"; sourceTree = "<group>"; };
@@ -4927,11 +4927,11 @@
 		7D7ED96C17D24579003761E4 /* WheelThumbnail */ = {
 			isa = PBXGroup;
 			children = (
-				7D7ED96D17D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Polished.jpg */,
-				7D7ED96E17D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Silver.jpg */,
-				7D7ED96F17D245D1003761E4 /* RapideS_ext_Thumbnail_20-Spoke Polished.jpg */,
-				7D7ED97017D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Black.jpg */,
-				7D7ED97117D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Silver.jpg */,
+				7D7ED96D17D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished_thumb.jpg */,
+				7D7ED96E17D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver_thumb.jpg */,
+				7D7ED96F17D245D1003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished_thumb.jpg */,
+				7D7ED97017D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Black_thumb.jpg */,
+				7D7ED97117D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Silver_thumb.jpg */,
 			);
 			name = WheelThumbnail;
 			sourceTree = "<group>";
@@ -5889,11 +5889,11 @@
 				7D7ED96817D244A8003761E4 /* RapideS_ext_Paint Colour_Tungsten Silver.png in Resources */,
 				7D7ED96917D244A8003761E4 /* RapideS_ext_Paint Colour_Viridian Green.png in Resources */,
 				7D7ED96A17D244A8003761E4 /* RapideS_ext_Paint Colour_Volcano Red.png in Resources */,
-				7D7ED97217D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Polished.jpg in Resources */,
-				7D7ED97317D245D1003761E4 /* RapideS_ext_Thumbnail_10-Spoke Silver.jpg in Resources */,
-				7D7ED97417D245D1003761E4 /* RapideS_ext_Thumbnail_20-Spoke Polished.jpg in Resources */,
-				7D7ED97517D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Black.jpg in Resources */,
-				7D7ED97617D245D1003761E4 /* RapideS_ext_Thumbnail_Multi-Spoke Silver.jpg in Resources */,
+				7D7ED97217D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished_thumb.jpg in Resources */,
+				7D7ED97317D245D1003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver_thumb.jpg in Resources */,
+				7D7ED97417D245D1003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished_thumb.jpg in Resources */,
+				7D7ED97517D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Black_thumb.jpg in Resources */,
+				7D7ED97617D245D1003761E4 /* RapideS_ext_Wheel Type_Multi-Spoke Silver_thumb.jpg in Resources */,
 				7D7ED97C17D245F5003761E4 /* RapideS_ext_Wheel Type_10-Spoke Polished.png in Resources */,
 				7D7ED97D17D245F5003761E4 /* RapideS_ext_Wheel Type_10-Spoke Silver.png in Resources */,
 				7D7ED97E17D245F5003761E4 /* RapideS_ext_Wheel Type_20-Spoke Polished.png in Resources */,
