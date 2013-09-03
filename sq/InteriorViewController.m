@@ -590,7 +590,6 @@
     NSString* lowerColor = [[[defaults stringForKey:@"LowerSelection"]componentsSeparatedByString:@"_"]lastObject];
     lowerColor = [lowerColor substringToIndex:[lowerColor length]-4];
     NSString* defaultColor = @"";
-    NSArray* colorArray;
     for (NSString *s in directoryContents)
     {
         if([s hasPrefix:[NSString stringWithFormat:@"%@_int%@_%@_",name,viewString,selectedFolder]])
@@ -706,7 +705,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //NSMutableArray *intFile = [[defaults objectForKey:@"interiorFiles"] mutableCopy];
     
     if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
@@ -1425,7 +1423,6 @@
     else viewString = @"";
     
     [self getFileNames];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     //[self setFirstTableDataSource:nil];
     //[self setImageFromDefaults];
     [self setInitialImages];

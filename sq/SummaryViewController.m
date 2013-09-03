@@ -264,9 +264,15 @@ int const LINESPACE = 25;
         NSString *fullString = [intFile objectAtIndex:i];
         NSString *result = [self contentsInParenthesis:fullString];
         NSArray *subStrings = [result componentsSeparatedByString:@"_"];
-        for (int i = 0; i < [subStrings count]; i++)
-        {
-            [label setText:[subStrings objectAtIndex:i]];
+        int subStringSize = [subStrings count];
+        if([detailName isEqualToString:@"Upper Stitch"]||[detailName isEqualToString:@"Lower Stitch"]||[detailName isEqualToString:@"Outer Stitch"]){
+            [label setText:[NSString stringWithFormat:@"%@ %@",subStrings[subStringSize-2], subStrings[subStringSize-1]]];
+        }
+        else{
+            for (int i = 0; i < [subStrings count]; i++)
+            {
+                [label setText:[subStrings objectAtIndex:i]];
+            }
         }
         detailValue = label.text;
         [self.scrollView addSubview:label];
@@ -378,7 +384,7 @@ int const LINESPACE = 25;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *selectedCarJSON;
     NSString *selectedCar = [defaults stringForKey:@"SelectedCarName"];
-        selectedCarJSON = [defaults objectForKey:selectedCar];
+    selectedCarJSON = [defaults objectForKey:selectedCar];
     UILabel *label;
     double partPrice = 0.0;
     
@@ -458,7 +464,7 @@ int const LINESPACE = 25;
     label.font = [UIFont boldSystemFontOfSize:16.0f];
     [label setText:[NSString stringWithFormat:@"%.2f",(exteriorPrice+exteriorPrice2+interiorPrice+interiorPrice2+otherPrice)]];
     [self.scrollView addSubview:label];
-
+    
 }
 
 - (void)viewDidLoad
@@ -787,7 +793,7 @@ int const LINESPACE = 25;
     NSDictionary *selectedCarJSON;
     double partPrice = 0.0;
     NSDictionary *partChild;
-        selectedCarJSON = [defaults objectForKey:selectedCar];
+    selectedCarJSON = [defaults objectForKey:selectedCar];
     
     if([categoryName isEqualToString:@"Paint Colour"]){
         partChild = [selectedCarJSON valueForKey:@"Ext Paint Color"];
@@ -824,7 +830,7 @@ int const LINESPACE = 25;
     NSDictionary *selectedCarJSON;
     double partPrice = 0.0;
     NSDictionary *partChild;
-        selectedCarJSON = [defaults objectForKey:selectedCar];
+    selectedCarJSON = [defaults objectForKey:selectedCar];
     if ([detailName isEqualToString:@"Wheel Type"]){
         detailValue = [detailValue stringByReplacingOccurrencesOfString:@"-" withString:@" "];
         partChild = [selectedCarJSON valueForKey:@"Wheel Type"];
@@ -847,6 +853,11 @@ int const LINESPACE = 25;
         NSArray *temp = [detailValue componentsSeparatedByString:@" "];
         partPrice = [[partChild valueForKey:temp[0]]doubleValue];
     }
+    else if ([detailName isEqualToString:@"Outer Stitch"]){
+        partChild = [selectedCarJSON valueForKey:@"Outer Stitch"];
+        NSArray *temp = [detailValue componentsSeparatedByString:@" "];
+        partPrice = [[partChild valueForKey:temp[0]]doubleValue];
+    }
     else if([detailName isEqualToString:@"Facia"]){
         partChild = [selectedCarJSON valueForKey:@"Facia"];
         NSArray *temp = [detailValue componentsSeparatedByString:@" "];
@@ -855,6 +866,15 @@ int const LINESPACE = 25;
         else
             partPrice = [[partChild valueForKey:temp[1]]doubleValue];
     }
+    else if ([detailName isEqualToString:@"Carbon Fibre Pack"]){
+        if([detailValue isEqualToString:@"Carbon Fibre"])
+            partPrice = [[selectedCarJSON valueForKey:@"Int Carbon Fibre"]doubleValue];
+    }
+    else if ([detailName isEqualToString:@"Piano Black Pack"]){
+        if([detailValue isEqualToString:@"Piano Black"])
+            partPrice = [[selectedCarJSON valueForKey:@"Piano Black Pack"]doubleValue];
+    }
+
     return partPrice;
     
 }
@@ -889,8 +909,8 @@ int const LINESPACE = 25;
     NSString *selectedCar = [defaults stringForKey:@"SelectedCarName"];
     NSDictionary *selectedCarJSON;
     double basePrice = 0.0;
-        selectedCarJSON = [defaults objectForKey:selectedCar];
-        basePrice = [[selectedCarJSON valueForKey:@"Base"]doubleValue];
+    selectedCarJSON = [defaults objectForKey:selectedCar];
+    basePrice = [[selectedCarJSON valueForKey:@"Base"]doubleValue];
     
     return basePrice;
 }
