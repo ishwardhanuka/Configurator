@@ -304,6 +304,7 @@
             [self.imvLower setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
             [defaults setObject:@"int_Obsidian Black.png" forKey:@"LowerSelection"];
+            [defaults setObject:@"Fast Track" forKey:[NSString stringWithFormat:@"%@ Category",folder]];
         }
         else if([folder isEqualToString:@"Piano Black Pack"])
         {
@@ -322,6 +323,7 @@
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvSeatInner setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
+            [defaults setObject:@"Fast Track" forKey:[NSString stringWithFormat:@"%@ Category",folder]];
         }
         else if([folder isEqualToString:@"Seat Outer"])
         {
@@ -331,6 +333,7 @@
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvSeatOuter setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
+            [defaults setObject:@"Fast Track" forKey:[NSString stringWithFormat:@"%@ Category",folder]];
         }
         else if([folder isEqualToString:@"Upper"])
         {
@@ -341,6 +344,7 @@
             [self.imvUpper setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
             [defaults setObject:@"int_Obsidian Black.png" forKey:@"UpperSelection"];
+            [defaults setObject:@"Fast Track" forKey:[NSString stringWithFormat:@"%@ Category",folder]];
         }
         else if([folder isEqualToString:@"Upper Env"])
         {
@@ -368,6 +372,7 @@
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvUpperIP setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
+            [defaults setObject:@"Fast Track" forKey:[NSString stringWithFormat:@"%@ Category",folder]];
         }
         else if([folder isEqualToString:@"Steering Wheel"])
         {
@@ -377,6 +382,7 @@
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvWheel setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
+            [defaults setObject:@"Fast Track" forKey:[NSString stringWithFormat:@"%@ Category",folder]];
         }
         //v8
         else if([folder isEqualToString:@"Base"])
@@ -758,8 +764,8 @@
             if([selectedFolder isEqualToString:@"Facia"])
                 [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Colour_%@_thumb.png",cell.textLabel.text]]];
             else{
-            NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
-            [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
+                NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
+                [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
             }
             /*
              if([intFile containsObject:[NSString stringWithFormat:@"%@.png",fileName]]){
@@ -822,10 +828,11 @@
             [self.imvCarpet setImage:[UIImage imageNamed:fileName]];
             string = @"Carpet";
         }
-        else if ([fileName rangeOfString:@"Door"].location != NSNotFound)
+        else if ([fileName rangeOfString:@"Door Inserts"].location != NSNotFound)
         {
             [self.imvDoor setImage:[UIImage imageNamed:fileName]];
-            string = @"Door";
+            [defaults setObject:fileName forKey:@"DoorInsertsSelection"];
+            string = @"Door Inserts";
         }
         else if ([fileName rangeOfString:@"Facia"].location != NSNotFound)
         {
@@ -856,6 +863,7 @@
         {
             [self.imvLower setImage:[UIImage imageNamed:fileName]];
             string = @"Lower";
+            [self updateUpperAndLower:fileName:@"Lower"];
             [defaults setObject:fileName forKey:@"LowerSelection"];
         }
         else if ([fileName rangeOfString:@"Piano"].location != NSNotFound)
@@ -871,16 +879,19 @@
         else if ([fileName rangeOfString:@"Seat Inner"].location != NSNotFound)
         {
             [self.imvSeatInner setImage:[UIImage imageNamed:fileName]];
+            [defaults setObject:fileName forKey:@"SeatInnerSelection"];
             string = @"Seat Inner";
         }
         else if ([fileName rangeOfString:@"Seat Outer"].location != NSNotFound)
         {
             [self.imvSeatOuter setImage:[UIImage imageNamed:fileName]];
+            [defaults setObject:fileName forKey:@"SeatOuterSelection"];
             string = @"Seat Outer";
         }
         else if ([fileName rangeOfString:@"Upper IP"].location != NSNotFound)
         {
             [self.imvUpperIP setImage:[UIImage imageNamed:fileName]];
+            [defaults setObject:fileName forKey:@"UpperIPSelection"];
             string = @"Upper IP";
         }
         else if ([fileName rangeOfString:@"Upper Stitch"].location != NSNotFound)
@@ -902,12 +913,14 @@
         {
             [self.imvUpper setImage:[UIImage imageNamed:fileName]];
             string = @"Upper";
+            [self updateUpperAndLower:fileName:@"Upper"];
             [defaults setObject:fileName forKey:@"UpperSelection"];
         }
-        else if ([fileName rangeOfString:@"Wheel"].location != NSNotFound)
+        else if ([fileName rangeOfString:@"Steering Wheel"].location != NSNotFound)
         {
             [self.imvWheel setImage:[UIImage imageNamed:fileName]];
-            string = @"Wheel";
+            [defaults setObject:fileName forKey:@"SteeringWheelSelection"];
+            string = @"Steering Wheel";
         }
         //v8
         else if ([fileName rangeOfString:@"Base"].location != NSNotFound)
@@ -984,15 +997,16 @@
             [self.imvBackground setImage:[UIImage imageNamed:fileName]];
             string = @"Background";
         }
+        else if ([fileName rangeOfString:@"Carbon Fibre Pack"].location != NSNotFound)
+        {
+            [self.imvCarbonPack setImage:[UIImage imageNamed:fileName]];
+            string = @"Carbon Fibre Pack";
+        }
+        
         else if ([fileName rangeOfString:@"Carbon Fibre"].location != NSNotFound)
         {
             [self.imvCarbonFibre setImage:[UIImage imageNamed:fileName]];
             string = @"Carbon Fibre";
-        }
-        else if ([fileName rangeOfString:@"Carbon Pack"].location != NSNotFound)
-        {
-            [self.imvCarbonPack setImage:[UIImage imageNamed:fileName]];
-            string = @"Carbon Pack";
         }
         else if ([fileName rangeOfString:@"Carpet"].location != NSNotFound)
         {
@@ -1035,10 +1049,10 @@
             string = @"Lower";
             [defaults setObject:fileName forKey:@"LowerSelection"];
         }
-        else if ([fileName rangeOfString:@"Piano"].location != NSNotFound)
+        else if ([fileName rangeOfString:@"Piano Black Pack"].location != NSNotFound)
         {
             [self.imvPiano setImage:[UIImage imageNamed:fileName]];
-            string = @"Piano";
+            string = @"Piano Black Pack";
         }
         else if ([fileName rangeOfString:@"Seat Inner Stitch"].location != NSNotFound)
         {
@@ -1143,6 +1157,63 @@
         
     }
 }
+
+-(void)updateUpperAndLower:(NSString*)fileName:(NSString*)selection{
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSArray* temp;
+    if([selection isEqualToString:@"Upper"])
+        temp = [[defaults stringForKey:@"UpperSelection"]componentsSeparatedByString:@"_"];
+    else
+        temp = [[defaults stringForKey:@"LowerSelection"]componentsSeparatedByString:@"_"];
+    int tempSize = [temp count];
+    NSString* mySelection = [NSString stringWithFormat:@"%@",temp[tempSize-1]];
+    temp = [[defaults stringForKey:@"UpperIPSelection"]componentsSeparatedByString:@"_"];
+    tempSize = [temp count];
+    NSString* newFileName = @"";
+    NSString* partSelection =  [NSString stringWithFormat:@"%@",temp[tempSize-1]];
+    if([mySelection isEqualToString:partSelection]&&![partSelection isEqualToString:@"Obsidian Black.png"]){
+        newFileName = [fileName stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"_%@_",selection] withString:@"_Upper IP_"];
+        [self.imvUpperIP setImage:[UIImage imageNamed:newFileName]];
+        [defaults setObject:newFileName forKey:@"UpperIPSelection"];
+        [self updateFileInUserDefault:@"Upper IP" :newFileName];
+    }
+    temp = [[defaults stringForKey:@"DoorInsertsSelection"]componentsSeparatedByString:@"_"];
+    tempSize = [temp count];
+    partSelection =  [NSString stringWithFormat:@"%@",temp[tempSize-1]];
+    if([mySelection isEqualToString:partSelection]&&![partSelection isEqualToString:@"Obsidian Black.png"]){
+        newFileName = [fileName stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"_%@_",selection] withString:@"_Door Inserts_"];
+        [self.imvDoor setImage:[UIImage imageNamed:newFileName]];
+        [defaults setObject:newFileName forKey:@"DoorInsertsSelection"];
+        [self updateFileInUserDefault:@"Door Inserts" :newFileName];
+    }
+    temp = [[defaults stringForKey:@"SeatInnerSelection"]componentsSeparatedByString:@"_"];
+    tempSize = [temp count];
+    partSelection =  [NSString stringWithFormat:@"%@",temp[tempSize-1]];
+    if([mySelection isEqualToString:partSelection]&&![partSelection isEqualToString:@"Obsidian Black.png"]){
+        newFileName = [fileName stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"_%@_",selection] withString:@"_Seat Inner_"];
+        [self.imvSeatInner setImage:[UIImage imageNamed:newFileName]];
+        [defaults setObject:newFileName forKey:@"SeatInnerSelection"];
+        [self updateFileInUserDefault:@"Seat Inner" :newFileName];
+    }
+    temp = [[defaults stringForKey:@"SeatOuterSelection"]componentsSeparatedByString:@"_"];
+    tempSize = [temp count];
+    partSelection =  [NSString stringWithFormat:@"%@",temp[tempSize-1]];
+    if([mySelection isEqualToString:partSelection]&&![partSelection isEqualToString:@"Obsidian Black.png"]){
+        newFileName = [fileName stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"_%@_",selection] withString:@"_Seat Outer_"];
+        [self.imvSeatOuter setImage:[UIImage imageNamed:newFileName]];
+        [defaults setObject:newFileName forKey:@"SeatOuterSelection"];
+        [self updateFileInUserDefault:@"Seat Outer" :newFileName];
+    }
+    temp = [[defaults stringForKey:@"SteeringWheelSelection"]componentsSeparatedByString:@"_"];
+    tempSize = [temp count];
+    partSelection =  [NSString stringWithFormat:@"%@",temp[tempSize-1]];
+    if([mySelection isEqualToString:partSelection]&&![partSelection isEqualToString:@"Obsidian Black.png"]){
+        newFileName = [fileName stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"_%@_",selection] withString:@"_Steering Wheel_"];
+        [self.imvWheel setImage:[UIImage imageNamed:newFileName]];
+        [defaults setObject:newFileName forKey:@"SteeringWheelSelection"];
+        [self updateFileInUserDefault:@"Steering Wheel" :newFileName];
+    }
+}
 -(void)setImageFromDefaults
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -1198,15 +1269,15 @@
             [self.imvBackground setImage:[UIImage imageNamed:fileName]];
             string = @"Background";
         }
+        else if ([fileName rangeOfString:@"Carbon Fibre Pack"].location != NSNotFound)
+        {
+            [self.imvCarbonPack setImage:[UIImage imageNamed:fileName]];
+            string = @"Carbon Fibre Pack";
+        }
         else if ([fileName rangeOfString:@"Carbon Fibre"].location != NSNotFound)
         {
             [self.imvCarbonFibre setImage:[UIImage imageNamed:fileName]];
             string = @"Carbon Fibre";
-        }
-        else if ([fileName rangeOfString:@"Carbon Pack"].location != NSNotFound)
-        {
-            [self.imvCarbonPack setImage:[UIImage imageNamed:fileName]];
-            string = @"Carbon Pack";
         }
         else if ([fileName rangeOfString:@"Carpet"].location != NSNotFound)
         {
@@ -1248,10 +1319,10 @@
             [self.imvLower setImage:[UIImage imageNamed:fileName]];
             string = @"Lower";
         }
-        else if ([fileName rangeOfString:@"Piano"].location != NSNotFound)
+        else if ([fileName rangeOfString:@"Piano Black Pack"].location != NSNotFound)
         {
             [self.imvPiano setImage:[UIImage imageNamed:fileName]];
-            string = @"Piano";
+            string = @"Piano Black Pack";
         }
         else if ([fileName rangeOfString:@"Seat Inner Stitch"].location != NSNotFound)
         {
@@ -1418,9 +1489,15 @@
 }
 
 - (IBAction)switchView:(id)sender {
-    if([viewString isEqualToString:@""])
+    //UIButton* button = (UIButton*)[self.view viewWithTag:100];
+    if([viewString isEqualToString:@""]){
         viewString = @"_2";
-    else viewString = @"";
+        //[button setTitle:@"View 2"];
+    }
+    else{
+        viewString = @"";
+        //[button setText:@"View 1"];
+    }
     
     [self getFileNames];
     //[self setFirstTableDataSource:nil];

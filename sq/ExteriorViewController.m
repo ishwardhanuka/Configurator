@@ -141,6 +141,8 @@
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvPaintColour setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
+            [defaults setObject:@"Fast Track" forKey:[NSString stringWithFormat:@"%@ Category",folder]];
+
         }
         else if([folder isEqualToString:@"Roof Graphic"])
         {
@@ -206,7 +208,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    NSString *domainName = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:domainName];
     [self setCarName:@"RapideS"];
     
     contemporary = [[NSMutableArray alloc]initWithObjects: @"AMETHYST RED", @"APPLETREE GREEN", @"COBALT BLUE", @"CONCOURS BLUE", @"RED LION", @"GREY BULL", @"HAMMERHEAD SILVER", @"HARDLY GREEN", @"SELENE BRONZE", @"LIGHTNING SILVER", @"MADAGASCAR ORANGE", @"MAKO BLUE", @"MARIANA BLUE", @"MARRON BLACK", @"QUANTUM SILVER", @"SILVER BLONDE", @"STRATUS WHITE", @"VIRIDIAN GREEN", nil];
