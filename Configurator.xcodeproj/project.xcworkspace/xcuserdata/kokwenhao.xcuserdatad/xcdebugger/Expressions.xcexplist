@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[InteriorViewController setInitialImages]:InteriorViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[intereiorFiles count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[InteriorViewController setStringForViews:]:InteriorViewController.m">
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

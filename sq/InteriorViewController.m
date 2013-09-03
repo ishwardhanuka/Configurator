@@ -31,7 +31,165 @@
 
 - (void)setInitialImages
 {
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *intereiorFiles = [defaults objectForKey:@"interiorFiles"];
+    for(NSString *fileName in intereiorFiles)
+    {
+        if ([fileName rangeOfString:@"Background"].location != NSNotFound)
+        {
+            [self.imvBackground setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Carbon Fibre"].location != NSNotFound)
+        {
+            [self.imvCarbonFibre setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Carbon Pack"].location != NSNotFound)
+        {
+            [self.imvCarbonPack setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Carpet"].location != NSNotFound)
+        {
+            [self.imvCarpet setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Door"].location != NSNotFound)
+        {
+            [self.imvDoor setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Facia"].location != NSNotFound)
+        {
+            [self.imvFacia setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Outer Stitch"].location != NSNotFound)
+        {
+            [self.imvOuterStitch setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Lower Stitch"].location != NSNotFound)
+        {
+            [self.imvLowerStitch setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Lower Env Stitch"].location != NSNotFound)
+        {
+            [self.imvLowerEnvStitch setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Lower Env"].location != NSNotFound)
+        {
+            [self.imvLowerEnv setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Lower"].location != NSNotFound)
+        {
+            [self.imvLower setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Piano"].location != NSNotFound)
+        {
+            [self.imvPiano setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Seat Inner Stitch"].location != NSNotFound)
+        {
+            [self.imvSeatInnerStitch setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Seat Inner"].location != NSNotFound)
+        {
+            [self.imvSeatInner setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Seat Outer"].location != NSNotFound)
+        {
+            [self.imvSeatOuter setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Upper IP"].location != NSNotFound)
+        {
+            [self.imvUpperIP setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Upper Stitch"].location != NSNotFound)
+        {
+            [self.imvUpperStitch setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Upper Env Stitch"].location != NSNotFound)
+        {
+            [self.imvUpperEnvStitch setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Upper Env"].location != NSNotFound)
+        {
+            [self.imvUpperEnv setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Upper"].location != NSNotFound)
+        {
+            [self.imvUpper setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+        }
+        else if ([fileName rangeOfString:@"Wheel"].location != NSNotFound)
+        {
+            [self.imvWheel setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Wheel";
+        }
+        //v8
+        else if ([fileName rangeOfString:@"Base"].location != NSNotFound)
+        {
+            [self.imvBase setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Base";
+        }
+        //van
+        else if ([fileName rangeOfString:@"Gearshift Paddles"].location != NSNotFound)
+        {
+            [self.imvGearshiftPaddles setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Gearshift Paddles";
+        }
+        else if ([fileName rangeOfString:@"Hardware Pack"].location != NSNotFound)
+        {
+            [self.imvHardwarePack setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Hardware Pack";
+        }
+        else if ([fileName rangeOfString:@"Headlining Outer"].location != NSNotFound)
+        {
+            [self.imvHeadliningOuter setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Headlining Outer";
+        }
+        else if ([fileName rangeOfString:@"Jewellery Pack"].location != NSNotFound)
+        {
+            [self.imvJewelleryPack setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Jewellery Pack";
+        }
+        else if ([fileName rangeOfString:@"Rotaries"].location != NSNotFound)
+        {
+            [self.imvRotaries setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Rotaries";
+        }
+        else if ([fileName rangeOfString:@"Seat Stitch"].location != NSNotFound)
+        {
+            [self.imvSeatStitch setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Seat Stitch";
+        }
+        else if ([fileName rangeOfString:@"Seat Accent Stitch"].location != NSNotFound)
+        {
+            [self.imvSeatAccentStitch setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Seat Accent Stitch";
+        }
+        else if ([fileName rangeOfString:@"Seat Accent"].location != NSNotFound)
+        {
+            [self.imvSeatAccent setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Seat Accent";
+        }
+        else if ([fileName rangeOfString:@"Seat"].location != NSNotFound)
+        {
+            [self.imvSeat setImage:[UIImage imageNamed:[self setStringForViews:fileName]]];
+            //string = @"Seat";
+        }
+    }
+}
+
+-(NSString*)setStringForViews:(NSString*)fileName{
+    NSArray* subArray = [fileName componentsSeparatedByString:@"_"];
+    NSString* newFileName = @"";
+    NSString* newViewString = @"";
+    if([viewString isEqualToString:@"_2"])
+        newViewString = @"2_";
+    for(int i=0;i<[subArray count];i++){
+        if(![subArray[i] isEqualToString:@"2"]){
+            newFileName = [newFileName stringByAppendingFormat:@"%@_",subArray[i]];
+            if(i==1)
+                newFileName = [newFileName stringByAppendingString:newViewString];
+        }
+    }
+    newFileName = [newFileName substringToIndex:[newFileName length]-1];
+    return newFileName;
 }
 
 - (void)setFirstTableDataSource:(NSArray*)folderList
@@ -145,6 +303,7 @@
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvLower setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
+            [defaults setObject:@"int_Obsidian Black.png" forKey:@"LowerSelection"];
         }
         else if([folder isEqualToString:@"Piano Black Pack"])
         {
@@ -181,6 +340,7 @@
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvUpper setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
             [arrayFiles addObject:[subArray objectAtIndex:0]];
+            [defaults setObject:@"int_Obsidian Black.png" forKey:@"UpperSelection"];
         }
         else if([folder isEqualToString:@"Upper Env"])
         {
@@ -422,7 +582,15 @@
     
     NSError * error;
     NSArray * directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:resourcePath error:&error];
-    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSString* colorName = @"";
+    NSString* temp = @"";
+    NSString* upperColor = [[[defaults stringForKey:@"UpperSelection"]componentsSeparatedByString:@"_"]lastObject];
+    upperColor = [upperColor substringToIndex:[upperColor length]-4];
+    NSString* lowerColor = [[[defaults stringForKey:@"LowerSelection"]componentsSeparatedByString:@"_"]lastObject];
+    lowerColor = [lowerColor substringToIndex:[lowerColor length]-4];
+    NSString* defaultColor = @"";
+    NSArray* colorArray;
     for (NSString *s in directoryContents)
     {
         if([s hasPrefix:[NSString stringWithFormat:@"%@_int%@_%@_",name,viewString,selectedFolder]])
@@ -430,15 +598,34 @@
             if(![s hasSuffix:@"thumb.jpg"])
             {
                 if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"])){
-                    NSString *colorName = [[s componentsSeparatedByString:@"_"]lastObject];
-                    
-                    if([contemporary containsObject:[[colorName substringToIndex:[colorName length]-4] uppercaseString]])
-                        [s1 addObject:s];
-                    else if([fastTrack containsObject:[[colorName substringToIndex:[colorName length]-4]uppercaseString]])
-                        [s2 addObject:s];
+                    if([name isEqualToString:@"RapideS"] && ([selectedFolder isEqualToString:@"Upper IP"]||[selectedFolder isEqualToString:@"Seat Outer"]||[selectedFolder isEqualToString:@"Steering Wheel"]||[selectedFolder isEqualToString:@"Seat Inner"])){
+                        if([selectedFolder isEqualToString:@"Upper IP"]||[selectedFolder isEqualToString:@"Seat Outer"]||[selectedFolder isEqualToString:@"Steering Wheel"]||[selectedFolder isEqualToString:@"Seat Inner"])
+                            defaultColor = @"Obsidian Black";
+                        else if([selectedFolder isEqualToString:@"Door Inserts"])
+                            defaultColor = @"Duotone";
+                        temp = [[s componentsSeparatedByString:@"_"]lastObject];
+                        temp = [temp substringToIndex:[temp length]-4];
+                        if([temp isEqualToString:upperColor]||[temp isEqualToString:lowerColor]||[temp isEqualToString:defaultColor]){
+                            colorName = temp;
+                            if([contemporary containsObject:[colorName uppercaseString]])
+                                [s1 addObject:s];
+                            else if([fastTrack containsObject:[colorName uppercaseString]])
+                                [s2 addObject:s];
+                        }
+                    }else{
+                        colorName = [[s componentsSeparatedByString:@"_"]lastObject];
+                        if([contemporary containsObject:[[colorName substringToIndex:[colorName length]-4] uppercaseString]])
+                            [s1 addObject:s];
+                        else if([fastTrack containsObject:[[colorName substringToIndex:[colorName length]-4]uppercaseString]])
+                            [s2 addObject:s];
+                    }
                 }
-                else
-                    [fileNames addObject:s];
+                else{
+                    if([selectedFolder isEqualToString:@"Upper Stitch"]){
+                        
+                    }else
+                        [fileNames addObject:s];
+                }
             }
         }
     }
@@ -585,9 +772,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"]) && tableView.tag == 1)
     {
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:[self tableView:tableView titleForHeaderInSection:indexPath.section] forKey:[NSString stringWithFormat:@"%@ Category",selectedFolder]];
         
         NSString *fileName;
@@ -660,6 +847,7 @@
         {
             [self.imvLower setImage:[UIImage imageNamed:fileName]];
             string = @"Lower";
+            [defaults setObject:fileName forKey:@"LowerSelection"];
         }
         else if ([fileName rangeOfString:@"Piano"].location != NSNotFound)
         {
@@ -705,6 +893,7 @@
         {
             [self.imvUpper setImage:[UIImage imageNamed:fileName]];
             string = @"Upper";
+            [defaults setObject:fileName forKey:@"UpperSelection"];
         }
         else if ([fileName rangeOfString:@"Wheel"].location != NSNotFound)
         {
@@ -835,6 +1024,7 @@
         {
             [self.imvLower setImage:[UIImage imageNamed:fileName]];
             string = @"Lower";
+            [defaults setObject:fileName forKey:@"LowerSelection"];
         }
         else if ([fileName rangeOfString:@"Piano"].location != NSNotFound)
         {
@@ -880,6 +1070,7 @@
         {
             [self.imvUpper setImage:[UIImage imageNamed:fileName]];
             string = @"Upper";
+            [defaults setObject:fileName forKey:@"UpperSelection"];
         }
         else if ([fileName rangeOfString:@"Wheel"].location != NSNotFound)
         {
@@ -1223,8 +1414,10 @@
     else viewString = @"";
     
     [self getFileNames];
-    [self setFirstTableDataSource:nil];
-    [self setImageFromDefaults];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[self setFirstTableDataSource:nil];
+    //[self setImageFromDefaults];
+    [self setInitialImages];
 }
 
 - (IBAction)loadV8:(id)sender {
