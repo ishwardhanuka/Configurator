@@ -878,6 +878,18 @@
 		738C73CB17C4EB220068F492 /* Colour_Cobalt Blue_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 738C739517C4EB220068F492 /* Colour_Cobalt Blue_thumb.png */; };
 		738C73CC17C4EB220068F492 /* Colour_Apple Tree Green_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 738C739617C4EB220068F492 /* Colour_Apple Tree Green_thumb.png */; };
 		738C73D417C4F57F0068F492 /* Colour_Amethyst Red_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 738C73D317C4F57E0068F492 /* Colour_Amethyst Red_thumb.png */; };
+		7D61F23517D5D4CA00A4F0F6 /* Colour_Black_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F23017D5D4C900A4F0F6 /* Colour_Black_thumb.png */; };
+		7D61F23617D5D4CA00A4F0F6 /* Colour_Grey_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F23117D5D4C900A4F0F6 /* Colour_Grey_thumb.png */; };
+		7D61F23717D5D4CA00A4F0F6 /* Colour_Red_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F23217D5D4C900A4F0F6 /* Colour_Red_thumb.png */; };
+		7D61F23817D5D4CA00A4F0F6 /* Colour_Silver_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F23317D5D4C900A4F0F6 /* Colour_Silver_thumb.png */; };
+		7D61F23917D5D4CA00A4F0F6 /* Colour_Yellow_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F23417D5D4CA00A4F0F6 /* Colour_Yellow_thumb.png */; };
+		7D61F23B17D5D52100A4F0F6 /* Colour_Hammerhead Silver_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F23A17D5D52100A4F0F6 /* Colour_Hammerhead Silver_thumb.png */; };
+		7D61F24317D5D5BC00A4F0F6 /* Colour_Blue_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F24117D5D5BC00A4F0F6 /* Colour_Blue_thumb.png */; };
+		7D61F24817D5D88600A4F0F6 /* Colour_Beige_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F24417D5D88400A4F0F6 /* Colour_Beige_thumb.png */; };
+		7D61F24917D5D88600A4F0F6 /* Colour_Green_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F24517D5D88500A4F0F6 /* Colour_Green_thumb.png */; };
+		7D61F24A17D5D88600A4F0F6 /* Colour_Lime Green_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F24617D5D88500A4F0F6 /* Colour_Lime Green_thumb.png */; };
+		7D61F24B17D5D88600A4F0F6 /* Colour_Raven Black_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F24717D5D88600A4F0F6 /* Colour_Raven Black_thumb.png */; };
+		7D61F24D17D5D98C00A4F0F6 /* Colour_Duotone_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D61F24C17D5D98B00A4F0F6 /* Colour_Duotone_thumb.png */; };
 		7D7ED91D17D24424003761E4 /* RapideS_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED91917D24424003761E4 /* RapideS_background.png */; };
 		7D7ED91E17D24424003761E4 /* RapideS_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED91A17D24424003761E4 /* RapideS_base.png */; };
 		7D7ED91F17D24424003761E4 /* RapideS_carshadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7ED91B17D24424003761E4 /* RapideS_carshadow.png */; };
@@ -1863,6 +1875,17 @@
 		7D7EE0DA17D32F4E003761E4 /* RapideS_int_2_Upper Stitch_Fine_Viridian Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EDF0717D32F4D003761E4 /* RapideS_int_2_Upper Stitch_Fine_Viridian Green.png */; };
 		7D7EE0DB17D32F4E003761E4 /* RapideS_int_2_Upper Stitch_Fine_Winter Wheat.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EDF0817D32F4D003761E4 /* RapideS_int_2_Upper Stitch_Fine_Winter Wheat.png */; };
 		7D7EE0DC17D32F4E003761E4 /* RapideS_int_2_Upper Stitch_Fine_Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EDF0917D32F4D003761E4 /* RapideS_int_2_Upper Stitch_Fine_Yellow.png */; };
+		7D7EE0DE17D5CC4A003761E4 /* Colour_Appletree Green_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0DD17D5CC48003761E4 /* Colour_Appletree Green_thumb.png */; };
+		7D7EE0E017D5CCF1003761E4 /* Colour_Grey Bull_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0DF17D5CCEF003761E4 /* Colour_Grey Bull_thumb.png */; };
+		7D7EE0E217D5CED1003761E4 /* Colour_Chainmail Grey_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0E117D5CED0003761E4 /* Colour_Chainmail Grey_thumb.png */; };
+		7D7EE0E417D5CEF4003761E4 /* Colour_Sandstorm_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0E317D5CEF2003761E4 /* Colour_Sandstorm_thumb.png */; };
+		7D7EE0E617D5CF15003761E4 /* Colour_Moonshadow_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0E517D5CF12003761E4 /* Colour_Moonshadow_thumb.png */; };
+		7D7EE0EC17D5CFD0003761E4 /* Colour_Kestrel Tan_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0E817D5CFC2003761E4 /* Colour_Kestrel Tan_thumb.png */; };
+		7D7EE0F417D5D1FA003761E4 /* Colour_Wood Bamboo_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0EF17D5D0FE003761E4 /* Colour_Wood Bamboo_thumb.png */; };
+		7D7EE0F517D5D1FA003761E4 /* Colour_Wood Mahogany_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0F017D5D10C003761E4 /* Colour_Wood Mahogany_thumb.png */; };
+		7D7EE0F617D5D1FA003761E4 /* Colour_Piano Black_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0F117D5D12F003761E4 /* Colour_Piano Black_thumb.png */; };
+		7D7EE0F717D5D1FA003761E4 /* Colour_Wood Tamoash_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0F217D5D165003761E4 /* Colour_Wood Tamoash_thumb.png */; };
+		7D7EE0F817D5D1FA003761E4 /* Colour_Wood Walnut_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7EE0F317D5D1AA003761E4 /* Colour_Wood Walnut_thumb.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -2745,6 +2768,18 @@
 		738C739517C4EB220068F492 /* Colour_Cobalt Blue_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Cobalt Blue_thumb.png"; sourceTree = "<group>"; };
 		738C739617C4EB220068F492 /* Colour_Apple Tree Green_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Apple Tree Green_thumb.png"; sourceTree = "<group>"; };
 		738C73D317C4F57E0068F492 /* Colour_Amethyst Red_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Amethyst Red_thumb.png"; sourceTree = "<group>"; };
+		7D61F23017D5D4C900A4F0F6 /* Colour_Black_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Black_thumb.png; sourceTree = "<group>"; };
+		7D61F23117D5D4C900A4F0F6 /* Colour_Grey_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Grey_thumb.png; sourceTree = "<group>"; };
+		7D61F23217D5D4C900A4F0F6 /* Colour_Red_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Red_thumb.png; sourceTree = "<group>"; };
+		7D61F23317D5D4C900A4F0F6 /* Colour_Silver_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Silver_thumb.png; sourceTree = "<group>"; };
+		7D61F23417D5D4CA00A4F0F6 /* Colour_Yellow_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Yellow_thumb.png; sourceTree = "<group>"; };
+		7D61F23A17D5D52100A4F0F6 /* Colour_Hammerhead Silver_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Hammerhead Silver_thumb.png"; sourceTree = "<group>"; };
+		7D61F24117D5D5BC00A4F0F6 /* Colour_Blue_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Blue_thumb.png; sourceTree = "<group>"; };
+		7D61F24417D5D88400A4F0F6 /* Colour_Beige_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Beige_thumb.png; sourceTree = "<group>"; };
+		7D61F24517D5D88500A4F0F6 /* Colour_Green_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Green_thumb.png; sourceTree = "<group>"; };
+		7D61F24617D5D88500A4F0F6 /* Colour_Lime Green_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Lime Green_thumb.png"; sourceTree = "<group>"; };
+		7D61F24717D5D88600A4F0F6 /* Colour_Raven Black_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Raven Black_thumb.png"; sourceTree = "<group>"; };
+		7D61F24C17D5D98B00A4F0F6 /* Colour_Duotone_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Duotone_thumb.png; sourceTree = "<group>"; };
 		7D7ED91917D24424003761E4 /* RapideS_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RapideS_background.png; sourceTree = "<group>"; };
 		7D7ED91A17D24424003761E4 /* RapideS_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RapideS_base.png; sourceTree = "<group>"; };
 		7D7ED91B17D24424003761E4 /* RapideS_carshadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RapideS_carshadow.png; sourceTree = "<group>"; };
@@ -3730,6 +3765,17 @@
 		7D7EDF0717D32F4D003761E4 /* RapideS_int_2_Upper Stitch_Fine_Viridian Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_int_2_Upper Stitch_Fine_Viridian Green.png"; sourceTree = "<group>"; };
 		7D7EDF0817D32F4D003761E4 /* RapideS_int_2_Upper Stitch_Fine_Winter Wheat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_int_2_Upper Stitch_Fine_Winter Wheat.png"; sourceTree = "<group>"; };
 		7D7EDF0917D32F4D003761E4 /* RapideS_int_2_Upper Stitch_Fine_Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RapideS_int_2_Upper Stitch_Fine_Yellow.png"; sourceTree = "<group>"; };
+		7D7EE0DD17D5CC48003761E4 /* Colour_Appletree Green_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Appletree Green_thumb.png"; sourceTree = "<group>"; };
+		7D7EE0DF17D5CCEF003761E4 /* Colour_Grey Bull_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Grey Bull_thumb.png"; sourceTree = "<group>"; };
+		7D7EE0E117D5CED0003761E4 /* Colour_Chainmail Grey_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Chainmail Grey_thumb.png"; sourceTree = "<group>"; };
+		7D7EE0E317D5CEF2003761E4 /* Colour_Sandstorm_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Sandstorm_thumb.png; sourceTree = "<group>"; };
+		7D7EE0E517D5CF12003761E4 /* Colour_Moonshadow_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Colour_Moonshadow_thumb.png; sourceTree = "<group>"; };
+		7D7EE0E817D5CFC2003761E4 /* Colour_Kestrel Tan_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Kestrel Tan_thumb.png"; sourceTree = "<group>"; };
+		7D7EE0EF17D5D0FE003761E4 /* Colour_Wood Bamboo_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Wood Bamboo_thumb.png"; sourceTree = "<group>"; };
+		7D7EE0F017D5D10C003761E4 /* Colour_Wood Mahogany_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Wood Mahogany_thumb.png"; sourceTree = "<group>"; };
+		7D7EE0F117D5D12F003761E4 /* Colour_Piano Black_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Piano Black_thumb.png"; sourceTree = "<group>"; };
+		7D7EE0F217D5D165003761E4 /* Colour_Wood Tamoash_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Wood Tamoash_thumb.png"; sourceTree = "<group>"; };
+		7D7EE0F317D5D1AA003761E4 /* Colour_Wood Walnut_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Colour_Wood Walnut_thumb.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -4553,61 +4599,84 @@
 		138FC33F1799842400A37B1C /* PaintColorThumbnail */ = {
 			isa = PBXGroup;
 			children = (
-				738C736117C4EB220068F492 /* Colour_Spicy Red_thumb.png */,
-				738C736217C4EB220068F492 /* Colour_Phantom Grey_thumb.png */,
+				7D61F24C17D5D98B00A4F0F6 /* Colour_Duotone_thumb.png */,
+				7D61F24417D5D88400A4F0F6 /* Colour_Beige_thumb.png */,
+				7D61F24517D5D88500A4F0F6 /* Colour_Green_thumb.png */,
+				7D61F24617D5D88500A4F0F6 /* Colour_Lime Green_thumb.png */,
+				7D61F24717D5D88600A4F0F6 /* Colour_Raven Black_thumb.png */,
 				738C73D317C4F57E0068F492 /* Colour_Amethyst Red_thumb.png */,
-				738C736317C4EB220068F492 /* Colour_Parliament Green_thumb.png */,
-				738C736417C4EB220068F492 /* Colour_Obsidian Black_thumb.png */,
-				738C736517C4EB220068F492 /* Colour_Iron Ore Red_thumb.png */,
-				738C736617C4EB220068F492 /* Colour_Dark Mocha_thumb.png */,
-				738C736717C4EB220068F492 /* Colour_Chain Mail Grey_thumb.png */,
-				738C736817C4EB220068F492 /* Colour_Baltic Blue_thumb.png */,
-				738C736917C4EB220068F492 /* Colour_Winter Wheat_thumb.png */,
-				738C736A17C4EB220068F492 /* Colour_Tuscan Tan_thumb.png */,
-				738C736B17C4EB220068F492 /* Colour_Spectral Blue_thumb.png */,
-				738C736C17C4EB220068F492 /* Colour_Sand Storm_thumb.png */,
-				738C736D17C4EB220068F492 /* Colour_Sahara Tan_thumb.png */,
-				738C736E17C4EB220068F492 /* Colour_Pure Black_thumb.png */,
-				738C736F17C4EB220068F492 /* Colour_Lords Red_thumb.png */,
-				738C737017C4EB220068F492 /* Colour_Ivory_thumb.png */,
-				738C737117C4EB220068F492 /* Colour_Ice Mocha_thumb.png */,
-				738C737217C4EB220068F492 /* Colour_Galena Silver_thumb.png */,
-				738C737317C4EB220068F492 /* Colour_Falcon Grey_thumb.png */,
-				738C737417C4EB220068F492 /* Colour_Eifel Green_thumb.png */,
-				738C737517C4EB220068F492 /* Colour_Deep Purple_thumb.png */,
-				738C737617C4EB220068F492 /* Colour_Chestnut Tan_thumb.png */,
-				738C737717C4EB220068F492 /* Colour_Cream Truffle_thumb.png */,
-				738C737817C4EB220068F492 /* Colour_Chancellor Red_thumb.png */,
-				738C737917C4EB220068F492 /* Colour_Blue Haze_thumb.png */,
-				738C737A17C4EB220068F492 /* Colour_Bitter Chocolate_thumb.png */,
+				738C739617C4EB220068F492 /* Colour_Apple Tree Green_thumb.png */,
+				7D7EE0DD17D5CC48003761E4 /* Colour_Appletree Green_thumb.png */,
 				738C737B17C4EB220068F492 /* Colour_Aurora Blue_thumb.png */,
-				738C737C17C4EB220068F492 /* Colour_Sunburst Yellow_thumb.png */,
-				738C737D17C4EB220068F492 /* Colour_Storm Black_thumb.png */,
-				738C737E17C4EB220068F492 /* Colour_Skyfall Silver_thumb.png */,
-				738C737F17C4EB220068F492 /* Colour_Morning Frost White_thumb.png */,
+				738C736817C4EB220068F492 /* Colour_Baltic Blue_thumb.png */,
+				7D7EE0EF17D5D0FE003761E4 /* Colour_Wood Bamboo_thumb.png */,
+				738C737A17C4EB220068F492 /* Colour_Bitter Chocolate_thumb.png */,
+				7D61F23017D5D4C900A4F0F6 /* Colour_Black_thumb.png */,
+				738C737917C4EB220068F492 /* Colour_Blue Haze_thumb.png */,
+				7D61F24117D5D5BC00A4F0F6 /* Colour_Blue_thumb.png */,
+				738C736717C4EB220068F492 /* Colour_Chain Mail Grey_thumb.png */,
+				7D7EE0E117D5CED0003761E4 /* Colour_Chainmail Grey_thumb.png */,
+				738C737817C4EB220068F492 /* Colour_Chancellor Red_thumb.png */,
+				738C737617C4EB220068F492 /* Colour_Chestnut Tan_thumb.png */,
+				738C739517C4EB220068F492 /* Colour_Cobalt Blue_thumb.png */,
+				738C739417C4EB220068F492 /* Colour_Concours Blue_thumb.png */,
+				738C737717C4EB220068F492 /* Colour_Cream Truffle_thumb.png */,
+				738C736617C4EB220068F492 /* Colour_Dark Mocha_thumb.png */,
+				738C737517C4EB220068F492 /* Colour_Deep Purple_thumb.png */,
+				738C737417C4EB220068F492 /* Colour_Eifel Green_thumb.png */,
+				738C737317C4EB220068F492 /* Colour_Falcon Grey_thumb.png */,
+				738C737217C4EB220068F492 /* Colour_Galena Silver_thumb.png */,
+				7D7EE0DF17D5CCEF003761E4 /* Colour_Grey Bull_thumb.png */,
+				7D61F23117D5D4C900A4F0F6 /* Colour_Grey_thumb.png */,
+				7D61F23A17D5D52100A4F0F6 /* Colour_Hammerhead Silver_thumb.png */,
+				738C739217C4EB220068F492 /* Colour_Hardly Green_thumb.png */,
+				738C737117C4EB220068F492 /* Colour_Ice Mocha_thumb.png */,
+				738C736517C4EB220068F492 /* Colour_Iron Ore Red_thumb.png */,
+				738C737017C4EB220068F492 /* Colour_Ivory_thumb.png */,
+				738C738717C4EB220068F492 /* Colour_Jet Black_thumb.png */,
+				7D7EE0E817D5CFC2003761E4 /* Colour_Kestrel Tan_thumb.png */,
 				738C738017C4EB220068F492 /* Colour_Kopi Bronze_thumb.png */,
-				738C738117C4EB220068F492 /* Colour_Volcano Red_thumb.png */,
-				738C738217C4EB220068F492 /* Colour_Tungsten Silver_thumb.png */,
-				738C738317C4EB220068F492 /* Colour_Silver Fox_thumb.png */,
-				738C738417C4EB220068F492 /* Colour_Onyx Black_thumb.png */,
+				738C739017C4EB220068F492 /* Colour_Lightning Silver_thumb.png */,
+				738C736F17C4EB220068F492 /* Colour_Lords Red_thumb.png */,
+				738C738F17C4EB220068F492 /* Colour_Madagascar Orange_thumb.png */,
+				7D7EE0F017D5D10C003761E4 /* Colour_Wood Mahogany_thumb.png */,
+				738C738E17C4EB220068F492 /* Colour_Mako Blue_thumb.png */,
+				738C738D17C4EB220068F492 /* Colour_Mariana Blue_thumb.png */,
+				738C738C17C4EB220068F492 /* Colour_Marron Black_thumb.png */,
 				738C738517C4EB220068F492 /* Colour_Meteorite Silver_thumb.png */,
 				738C738617C4EB220068F492 /* Colour_Midnight Blue_thumb.png */,
-				738C738717C4EB220068F492 /* Colour_Jet Black_thumb.png */,
-				738C738817C4EB220068F492 /* Colour_Viridian Green_thumb.png */,
-				738C738917C4EB220068F492 /* Colour_Stratus White_thumb.png */,
-				738C738A17C4EB220068F492 /* Colour_Silver Blonde_thumb.png */,
+				7D7EE0E517D5CF12003761E4 /* Colour_Moonshadow_thumb.png */,
+				738C737F17C4EB220068F492 /* Colour_Morning Frost White_thumb.png */,
+				738C736417C4EB220068F492 /* Colour_Obsidian Black_thumb.png */,
+				738C738417C4EB220068F492 /* Colour_Onyx Black_thumb.png */,
+				738C736317C4EB220068F492 /* Colour_Parliament Green_thumb.png */,
+				738C736217C4EB220068F492 /* Colour_Phantom Grey_thumb.png */,
+				7D7EE0F117D5D12F003761E4 /* Colour_Piano Black_thumb.png */,
+				738C736E17C4EB220068F492 /* Colour_Pure Black_thumb.png */,
 				738C738B17C4EB220068F492 /* Colour_Quantum Silver_thumb.png */,
-				738C738C17C4EB220068F492 /* Colour_Marron Black_thumb.png */,
-				738C738D17C4EB220068F492 /* Colour_Mariana Blue_thumb.png */,
-				738C738E17C4EB220068F492 /* Colour_Mako Blue_thumb.png */,
-				738C738F17C4EB220068F492 /* Colour_Madagascar Orange_thumb.png */,
-				738C739017C4EB220068F492 /* Colour_Lightning Silver_thumb.png */,
-				738C739117C4EB220068F492 /* Colour_Selene Bronze_thumb.png */,
-				738C739217C4EB220068F492 /* Colour_Hardly Green_thumb.png */,
 				738C739317C4EB220068F492 /* Colour_Red Lion_thumb.png */,
-				738C739417C4EB220068F492 /* Colour_Concours Blue_thumb.png */,
-				738C739517C4EB220068F492 /* Colour_Cobalt Blue_thumb.png */,
-				738C739617C4EB220068F492 /* Colour_Apple Tree Green_thumb.png */,
+				7D61F23217D5D4C900A4F0F6 /* Colour_Red_thumb.png */,
+				738C736D17C4EB220068F492 /* Colour_Sahara Tan_thumb.png */,
+				738C736C17C4EB220068F492 /* Colour_Sand Storm_thumb.png */,
+				7D7EE0E317D5CEF2003761E4 /* Colour_Sandstorm_thumb.png */,
+				738C739117C4EB220068F492 /* Colour_Selene Bronze_thumb.png */,
+				738C738A17C4EB220068F492 /* Colour_Silver Blonde_thumb.png */,
+				738C738317C4EB220068F492 /* Colour_Silver Fox_thumb.png */,
+				7D61F23317D5D4C900A4F0F6 /* Colour_Silver_thumb.png */,
+				738C737E17C4EB220068F492 /* Colour_Skyfall Silver_thumb.png */,
+				738C736B17C4EB220068F492 /* Colour_Spectral Blue_thumb.png */,
+				738C736117C4EB220068F492 /* Colour_Spicy Red_thumb.png */,
+				738C737D17C4EB220068F492 /* Colour_Storm Black_thumb.png */,
+				738C738917C4EB220068F492 /* Colour_Stratus White_thumb.png */,
+				738C737C17C4EB220068F492 /* Colour_Sunburst Yellow_thumb.png */,
+				7D7EE0F217D5D165003761E4 /* Colour_Wood Tamoash_thumb.png */,
+				738C738217C4EB220068F492 /* Colour_Tungsten Silver_thumb.png */,
+				738C736A17C4EB220068F492 /* Colour_Tuscan Tan_thumb.png */,
+				738C738817C4EB220068F492 /* Colour_Viridian Green_thumb.png */,
+				738C738117C4EB220068F492 /* Colour_Volcano Red_thumb.png */,
+				7D7EE0F317D5D1AA003761E4 /* Colour_Wood Walnut_thumb.png */,
+				738C736917C4EB220068F492 /* Colour_Winter Wheat_thumb.png */,
+				7D61F23417D5D4CA00A4F0F6 /* Colour_Yellow_thumb.png */,
 			);
 			name = PaintColorThumbnail;
 			sourceTree = "<group>";
@@ -8362,6 +8431,29 @@
 				7D7EE0DA17D32F4E003761E4 /* RapideS_int_2_Upper Stitch_Fine_Viridian Green.png in Resources */,
 				7D7EE0DB17D32F4E003761E4 /* RapideS_int_2_Upper Stitch_Fine_Winter Wheat.png in Resources */,
 				7D7EE0DC17D32F4E003761E4 /* RapideS_int_2_Upper Stitch_Fine_Yellow.png in Resources */,
+				7D7EE0DE17D5CC4A003761E4 /* Colour_Appletree Green_thumb.png in Resources */,
+				7D7EE0E017D5CCF1003761E4 /* Colour_Grey Bull_thumb.png in Resources */,
+				7D7EE0E217D5CED1003761E4 /* Colour_Chainmail Grey_thumb.png in Resources */,
+				7D7EE0E417D5CEF4003761E4 /* Colour_Sandstorm_thumb.png in Resources */,
+				7D7EE0E617D5CF15003761E4 /* Colour_Moonshadow_thumb.png in Resources */,
+				7D7EE0EC17D5CFD0003761E4 /* Colour_Kestrel Tan_thumb.png in Resources */,
+				7D7EE0F417D5D1FA003761E4 /* Colour_Wood Bamboo_thumb.png in Resources */,
+				7D7EE0F517D5D1FA003761E4 /* Colour_Wood Mahogany_thumb.png in Resources */,
+				7D7EE0F617D5D1FA003761E4 /* Colour_Piano Black_thumb.png in Resources */,
+				7D7EE0F717D5D1FA003761E4 /* Colour_Wood Tamoash_thumb.png in Resources */,
+				7D7EE0F817D5D1FA003761E4 /* Colour_Wood Walnut_thumb.png in Resources */,
+				7D61F23517D5D4CA00A4F0F6 /* Colour_Black_thumb.png in Resources */,
+				7D61F23617D5D4CA00A4F0F6 /* Colour_Grey_thumb.png in Resources */,
+				7D61F23717D5D4CA00A4F0F6 /* Colour_Red_thumb.png in Resources */,
+				7D61F23817D5D4CA00A4F0F6 /* Colour_Silver_thumb.png in Resources */,
+				7D61F23917D5D4CA00A4F0F6 /* Colour_Yellow_thumb.png in Resources */,
+				7D61F23B17D5D52100A4F0F6 /* Colour_Hammerhead Silver_thumb.png in Resources */,
+				7D61F24317D5D5BC00A4F0F6 /* Colour_Blue_thumb.png in Resources */,
+				7D61F24817D5D88600A4F0F6 /* Colour_Beige_thumb.png in Resources */,
+				7D61F24917D5D88600A4F0F6 /* Colour_Green_thumb.png in Resources */,
+				7D61F24A17D5D88600A4F0F6 /* Colour_Lime Green_thumb.png in Resources */,
+				7D61F24B17D5D88600A4F0F6 /* Colour_Raven Black_thumb.png in Resources */,
+				7D61F24D17D5D98C00A4F0F6 /* Colour_Duotone_thumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

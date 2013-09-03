@@ -794,19 +794,24 @@ int const LINESPACE = 25;
         if([categoryValue isEqualToString:@"Specials"])
             categoryValue = @"Special";
         partPrice = [[partChild valueForKey:categoryValue]doubleValue];
-    }else if([categoryName isEqualToString:@"Upper"]){
+    }
+    else if([categoryName isEqualToString:@"Upper"]){
         partChild = [selectedCarJSON valueForKey:@"Int Upper Paint Color"];
         partPrice = [[partChild valueForKey:categoryValue]doubleValue];
-    }else if ([categoryName isEqualToString:@"Lower"]){
+    }
+    else if ([categoryName isEqualToString:@"Lower"]){
         partChild = [selectedCarJSON valueForKey:@"Int Lower Paint Color"];
         partPrice = [[partChild valueForKey:categoryValue]doubleValue];
-    }else if ([categoryName isEqualToString:@"Seat Inner"]){
+    }
+    else if ([categoryName isEqualToString:@"Seat Inner"]){
         partChild = [selectedCarJSON valueForKey:@"Seat Inner"];
         partPrice = [[partChild valueForKey:categoryValue]doubleValue];
-    }else if ([categoryName isEqualToString:@"Seat Outer"]){
+    }
+    else if ([categoryName isEqualToString:@"Seat Outer"]){
         partChild = [selectedCarJSON valueForKey:@"Seat Outer"];
         partPrice = [[partChild valueForKey:categoryValue]doubleValue];
-    }else if ([categoryName isEqualToString:@"Door"]){
+    }
+    else if ([categoryName isEqualToString:@"Door"]){
         partChild = [selectedCarJSON valueForKey:@"Door"];
         partPrice = [[partChild valueForKey:categoryValue]doubleValue];
     }
@@ -821,19 +826,28 @@ int const LINESPACE = 25;
     NSDictionary *partChild;
         selectedCarJSON = [defaults objectForKey:selectedCar];
     if ([detailName isEqualToString:@"Wheel Type"]){
+        detailValue = [detailValue stringByReplacingOccurrencesOfString:@"-" withString:@" "];
         partChild = [selectedCarJSON valueForKey:@"Wheel Type"];
         partPrice = [[partChild valueForKey:detailValue]doubleValue];
-    }else if([detailName isEqualToString:@"Caliper Colour"]){
+    }
+    else if ([detailName isEqualToString:@"Carbon Fibre"]){
+        if([detailValue isEqualToString:@"Carbon Fibre"])
+            partPrice = [[selectedCarJSON valueForKey:@"Ext Carbon Fibre"]doubleValue];
+    }
+    else if([detailName isEqualToString:@"Caliper Colour"]){
         partPrice = [[selectedCarJSON valueForKey:@"Caliper Color"]doubleValue];
-    }else if ([detailName isEqualToString:@"Upper Stitch"]){
+    }
+    else if ([detailName isEqualToString:@"Upper Stitch"]){
         partChild = [selectedCarJSON valueForKey:@"Upper Stitch"];
         NSArray *temp = [detailValue componentsSeparatedByString:@" "];
         partPrice = [[partChild valueForKey:temp[0]]doubleValue];
-    }else if ([detailName isEqualToString:@"Lower Stitch"]){
+    }
+    else if ([detailName isEqualToString:@"Lower Stitch"]){
         partChild = [selectedCarJSON valueForKey:@"Lower Stitch"];
         NSArray *temp = [detailValue componentsSeparatedByString:@" "];
         partPrice = [[partChild valueForKey:temp[0]]doubleValue];
-    }else if([detailName isEqualToString:@"Facia"]){
+    }
+    else if([detailName isEqualToString:@"Facia"]){
         partChild = [selectedCarJSON valueForKey:@"Facia"];
         NSArray *temp = [detailValue componentsSeparatedByString:@" "];
         if([temp[1] isEqualToString:@"Tamoash"])

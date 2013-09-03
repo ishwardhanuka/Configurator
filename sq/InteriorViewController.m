@@ -731,9 +731,7 @@
             cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", subStrings[subStringSize-2], subStrings[subStringSize-1]];
         else
             cell.textLabel.text = [NSString stringWithFormat:@"%@", subStrings[subStringSize-1]];
-        
-        //NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
-        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Colour_%@_thumb.png",cell.textLabel.text]]];
+        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Colour_%@_thumb.png",subStrings[subStringSize-1]]]];
     }
     else if (tableView.tag == 0)
     {
@@ -747,6 +745,7 @@
             NSArray *subStrings = [result componentsSeparatedByString:@"_"];
             int subStringSize = sizeof(subStrings);
             cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", subStrings[subStringSize-2], subStrings[subStringSize-1]];
+            [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Colour_%@_thumb.png",subStrings[subStringSize-1]]]];
         }else{
             //cell.textLabel.text = [fileNames objectAtIndex:indexPath.row];
             
@@ -758,9 +757,12 @@
             {
                 cell.textLabel.text = [subStrings objectAtIndex:i];
             }
-            
+            if([selectedFolder isEqualToString:@"Facia"])
+                [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Colour_%@_thumb.png",cell.textLabel.text]]];
+            else{
             NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
             [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
+            }
             /*
              if([intFile containsObject:[NSString stringWithFormat:@"%@.png",fileName]]){
              

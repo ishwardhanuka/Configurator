@@ -276,7 +276,7 @@
                         [s3 addObject:s];
                 }
                 else
-                [fileNames addObject:s];
+                    [fileNames addObject:s];
             }
         }
     }
@@ -378,12 +378,10 @@
             cell.textLabel.text = [subStrings objectAtIndex:i];
         }
         
-        NSString *fileName = [NSString stringWithFormat:@"Colour_%@_thumb.png",cell.textLabel.text];
         [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Colour_%@_thumb.png",cell.textLabel.text]]];
-    
+        
         
     }
-    
     else if (tableView.tag == 0)
     {
         cell.textLabel.text = [arrayFirstTableView objectAtIndex:indexPath.row];
@@ -400,9 +398,13 @@
         {
             cell.textLabel.text = [subStrings objectAtIndex:i];
         }
-        
-        NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
-        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
+        if([selectedFolder isEqualToString:@"Caliper Colour"]){
+            [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Colour_%@_thumb.png",cell.textLabel.text]]];
+            
+        }else{
+            NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
+            [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
+        }
     }
     
     return cell;
@@ -584,7 +586,7 @@
         
         NSLog(@"extfile : %@",[extFile objectAtIndex:i]);
     }
-
+    
     [defaults setObject:extFile forKey:@"exteriorFiles"];
     [defaults synchronize];
 }
