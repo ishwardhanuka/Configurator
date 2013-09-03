@@ -555,7 +555,7 @@
     
     [self setCarName:@"RapideS" :@"1"];
     viewString = @"";
-    contemporary = [[NSMutableArray alloc] initWithObjects:@"AURORA BLUE", @"BITTER CHOCOLATE", @"BLUE HAZE", @"CHANCELLOR RED", @"CHESTNUT TAN", @"CREAM TRUFFLE", @"DEEP PURPLE", @"EIFEL GREEN", @"FALCON GREY", @"GALENA SILVER", @"ICE MOCHA", @"IVORY", @"LORDS RED", @"MADAGASCAR ORANGE", @"MOONSHADOW", @"PURE BLACK", @"SAHARA TAN", @"SANDSTORM", @"SPECTRAL BLUE", @"TUSCAN TAN", @"WINTER WHEAT", nil];
+    contemporary = [[NSMutableArray alloc] initWithObjects:@"AURORA BLUE", @"BITTER CHOCOLATE", @"BLUE HAZE", @"CHANCELLOR RED", @"CHESTNUT TAN", @"CREAM TRUFFLE", @"DEEP PURPLE", @"EIFEL GREEN", @"FALCON GREY", @"GALENA SILVER", @"ICE MOCHA", @"IVORY", @"LORDS RED", @"MADAGASCAR ORANGE", @"MOONSHADOW", @"PURE BLACK", @"SAHARA TAN", @"SANDSTORM", @"SPECTRAL BLUE", @"TUSCAN TAN", @"WINTER WHEAT",@"DUOTONE", @"WOOD PIANO BLACK", nil];
     
     fastTrack = [[NSMutableArray alloc] initWithObjects:@"BALTIC BLUE", @"CHAINMAIL GREY", @"DARK MOCHA", @"IRON ORE RED", @"OBSIDIAN BLACK", @"PARLIAMENT GREEN", @"PHANTOM GREY", @"SPICY RED", nil];
     
@@ -598,14 +598,14 @@
             if(![s hasSuffix:@"thumb.jpg"])
             {
                 if(!([selectedFolder isEqualToString:@"Facia"] || [selectedFolder isEqualToString:@"Carbon Fibre Pack"] || [selectedFolder isEqualToString:@"Piano Black Pack"]  || [selectedFolder isEqualToString:@"Piano Black Pack"] || [selectedFolder isEqualToString:@"Upper Stitch"] || [selectedFolder isEqualToString:@"Lower Stitch"] || [selectedFolder isEqualToString:@"Outer Stitch"])){
-                    if([name isEqualToString:@"RapideS"] && ([selectedFolder isEqualToString:@"Upper IP"]||[selectedFolder isEqualToString:@"Seat Outer"]||[selectedFolder isEqualToString:@"Steering Wheel"]||[selectedFolder isEqualToString:@"Seat Inner"])){
+                    if([name isEqualToString:@"RapideS"] && ([selectedFolder isEqualToString:@"Upper IP"]||[selectedFolder isEqualToString:@"Seat Outer"]||[selectedFolder isEqualToString:@"Steering Wheel"]||[selectedFolder isEqualToString:@"Seat Inner"]||[selectedFolder isEqualToString:@"Door Inserts"])){
                         if([selectedFolder isEqualToString:@"Upper IP"]||[selectedFolder isEqualToString:@"Seat Outer"]||[selectedFolder isEqualToString:@"Steering Wheel"]||[selectedFolder isEqualToString:@"Seat Inner"])
                             defaultColor = @"Obsidian Black";
                         else if([selectedFolder isEqualToString:@"Door Inserts"])
                             defaultColor = @"Duotone";
                         temp = [[s componentsSeparatedByString:@"_"]lastObject];
                         temp = [temp substringToIndex:[temp length]-4];
-                        if([temp isEqualToString:upperColor]||[temp isEqualToString:lowerColor]||[temp isEqualToString:defaultColor]){
+                        if([temp isEqualToString:upperColor]||[temp isEqualToString:lowerColor]||[temp isEqualToString:defaultColor]||([selectedFolder isEqualToString:@"Door Inserts"]&&[temp isEqualToString:@"Wood Piano Black"])||([selectedFolder isEqualToString:@"Seat Inner"]&&[temp isEqualToString:@"Duotone"])){
                             colorName = temp;
                             if([contemporary containsObject:[colorName uppercaseString]])
                                 [s1 addObject:s];
@@ -622,7 +622,7 @@
                 }
                 else{
                     if([selectedFolder isEqualToString:@"Upper Stitch"]){
-                        
+                        [fileNames addObject:s];
                     }else
                         [fileNames addObject:s];
                 }
@@ -726,10 +726,11 @@
         
         NSString *result = [self contentsInParenthesis:fullString];
         NSArray *subStrings = [result componentsSeparatedByString:@"_"];
-        for (int i = 0; i < [subStrings count]; i++)
-        {
-            cell.textLabel.text = [subStrings objectAtIndex:i];
-        }
+        int subStringSize = [subStrings count];
+        if([subStrings[subStringSize-2] isEqualToString:@"Perforated"])
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", subStrings[subStringSize-2], subStrings[subStringSize-1]];
+        else
+            cell.textLabel.text = [NSString stringWithFormat:@"%@", subStrings[subStringSize-1]];
         
         //NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
         [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"Colour_%@_thumb.png",cell.textLabel.text]]];
@@ -740,24 +741,32 @@
     }
     else
     {
-        //cell.textLabel.text = [fileNames objectAtIndex:indexPath.row];
-        
-        NSString *fullString = [fileNames objectAtIndex:indexPath.row];
-        
-        NSString *result = [self contentsInParenthesis:fullString];
-        NSArray *subStrings = [result componentsSeparatedByString:@"_"];
-        for (int i = 0; i < [subStrings count]; i++)
-        {
-            cell.textLabel.text = [subStrings objectAtIndex:i];
+        if([selectedFolder isEqualToString:@"Upper Stitch"]||[selectedFolder isEqualToString:@"Lower Stitch"]||[selectedFolder isEqualToString:@"Outer Stitch"]||[selectedFolder isEqualToString:@"Outer Stitch"]){
+            NSString* fullString = [fileNames objectAtIndex:indexPath.row];
+            NSString *result = [self contentsInParenthesis:fullString];
+            NSArray *subStrings = [result componentsSeparatedByString:@"_"];
+            int subStringSize = sizeof(subStrings);
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", subStrings[subStringSize-2], subStrings[subStringSize-1]];
+        }else{
+            //cell.textLabel.text = [fileNames objectAtIndex:indexPath.row];
+            
+            NSString *fullString = [fileNames objectAtIndex:indexPath.row];
+            
+            NSString *result = [self contentsInParenthesis:fullString];
+            NSArray *subStrings = [result componentsSeparatedByString:@"_"];
+            for (int i = 0; i < [subStrings count]; i++)
+            {
+                cell.textLabel.text = [subStrings objectAtIndex:i];
+            }
+            
+            NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
+            [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
+            /*
+             if([intFile containsObject:[NSString stringWithFormat:@"%@.png",fileName]]){
+             
+             [cell setSelected:YES];
+             }*/
         }
-        
-        NSString *fileName = [[[fileNames objectAtIndex:indexPath.row]componentsSeparatedByString:@".png"]objectAtIndex:0];
-        [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_thumb.jpg",fileName]]];
-        /*
-         if([intFile containsObject:[NSString stringWithFormat:@"%@.png",fileName]]){
-         
-         [cell setSelected:YES];
-         }*/
     }
     
     return cell;
