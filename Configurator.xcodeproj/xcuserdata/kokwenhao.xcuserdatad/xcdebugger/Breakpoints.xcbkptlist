@@ -221,11 +221,11 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1162"
          endingLineNumber = "1162"
-         landmarkName = "-updateUpperAndLower:"
+         landmarkName = "-updateUpperAndLower::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sq/ExteriorViewController.m"
@@ -235,6 +235,32 @@
          startingLineNumber = "209"
          endingLineNumber = "209"
          landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sq/SummaryViewController.m"
+         timestampString = "399956986.484865"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "196"
+         endingLineNumber = "196"
+         landmarkName = "-setInteriorFolderLabel"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sq/SummaryViewController.m"
+         timestampString = "399957112.183793"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "925"
+         endingLineNumber = "925"
+         landmarkName = "-setFirstTableDataSource:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
