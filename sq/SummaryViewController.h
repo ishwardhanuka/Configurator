@@ -31,6 +31,7 @@ extern int const LINESPACE;
 
 
 - (IBAction)share:(id)sender;
+- (IBAction)editUserInfo:(id)sender;
 
 
 

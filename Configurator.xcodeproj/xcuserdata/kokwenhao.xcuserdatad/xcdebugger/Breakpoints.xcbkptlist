@@ -242,11 +242,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sq/SummaryViewController.m"
-         timestampString = "399956986.484865"
+         timestampString = "400567995.735848"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "196"
-         endingLineNumber = "196"
+         startingLineNumber = "218"
+         endingLineNumber = "218"
          landmarkName = "-setInteriorFolderLabel"
          landmarkType = "5">
       </FileBreakpoint>
@@ -255,12 +255,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sq/SummaryViewController.m"
-         timestampString = "399957112.183793"
+         timestampString = "400584181.627601"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "925"
-         endingLineNumber = "925"
+         startingLineNumber = "1026"
+         endingLineNumber = "1026"
          landmarkName = "-setFirstTableDataSource:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sq/SummaryViewController.m"
+         timestampString = "400577159.57072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "589"
+         endingLineNumber = "589"
+         landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

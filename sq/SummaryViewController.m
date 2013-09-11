@@ -27,6 +27,11 @@ int const LINESPACE = 25;
 
 - (void)setExteriorFolderLabel
 {
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [numberFormatter setCurrencySymbol:@""];
+    NSNumber* priceNumber = [[NSNumber alloc] init];
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *extFolderList = [NSMutableArray arrayWithArray:[defaults objectForKey:@"exteriorFolders"]];
     exteriorPrice = 0.0;
@@ -65,9 +70,11 @@ int const LINESPACE = 25;
     [exteriorLabel setText:@"Base Unit (Inclusive of Duty/Taxes)"];
     [self.scrollView addSubview:exteriorLabel];
     
-    exteriorLabel = [[UILabel alloc] initWithFrame:CGRectMake(700, 240, 200, 20)];
+    exteriorLabel = [[UILabel alloc] initWithFrame:CGRectMake(700, 240, 100, 20)];
     exteriorLabel.font = [UIFont boldSystemFontOfSize:16.0f];
-    [exteriorLabel setText:[NSString stringWithFormat:@"%.2f", [self getCarBasePrice]]];
+    priceNumber = [NSNumber numberWithDouble:[self getCarBasePrice]];
+    exteriorLabel.textAlignment = NSTextAlignmentRight;
+    [exteriorLabel setText:[numberFormatter stringFromNumber:priceNumber]];
     exteriorPrice = exteriorPrice + [self getCarBasePrice];
     [self.scrollView addSubview:exteriorLabel];
     
@@ -93,6 +100,7 @@ int const LINESPACE = 25;
     
     NSString *categoryName;
     NSString *categoryValue;
+    
     for (int i = 0; i < [extFolderList count]; i++)
     {
         UILabel *label;
@@ -117,8 +125,10 @@ int const LINESPACE = 25;
         
         double temp = [self getPriceByCategory:categoryName :categoryValue];
         if(temp != 0.0){
-            label = [[UILabel alloc] initWithFrame:CGRectMake(700, i*LINESPACE+310, 200, 20)];
-            [label setText:[NSString stringWithFormat:@"%.02f", temp]];
+            label = [[UILabel alloc] initWithFrame:CGRectMake(700, i*LINESPACE+310, 100, 20)];
+            priceNumber = [NSNumber numberWithDouble:temp];
+            label.textAlignment = NSTextAlignmentRight;
+            [label setText:[numberFormatter stringFromNumber:priceNumber]];
             [self.scrollView addSubview:label];
             exteriorPrice = exteriorPrice + temp;
         }
@@ -147,6 +157,11 @@ int const LINESPACE = 25;
 
 - (void)setExteriorFileLabel
 {
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [numberFormatter setCurrencySymbol:@""];
+    NSNumber* priceNumber = [[NSNumber alloc] init];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *extFile = [NSMutableArray arrayWithArray:[defaults objectForKey:@"exteriorFiles"]];
     NSMutableArray *extFolderList = [NSMutableArray arrayWithArray:[defaults objectForKey:@"exteriorFolders"]];
@@ -179,8 +194,10 @@ int const LINESPACE = 25;
         
         double partPrice = [self getPriceByDetail:detailName :detailValue];
         if(partPrice != 0.0){
-            label = [[UILabel alloc] initWithFrame:CGRectMake(700, i*LINESPACE + 310, 200, 20)];
-            [label setText:[NSString stringWithFormat:@"%.2f", partPrice]];
+            label = [[UILabel alloc] initWithFrame:CGRectMake(700, i*LINESPACE + 310, 100, 20)];
+            priceNumber = [NSNumber numberWithDouble:partPrice];
+            label.textAlignment = NSTextAlignmentRight;
+            [label setText:[numberFormatter stringFromNumber:priceNumber]];
             [self.scrollView addSubview:label];
             exteriorPrice2 = exteriorPrice2 + partPrice;
         }
@@ -192,6 +209,11 @@ int const LINESPACE = 25;
 
 - (void)setInteriorFolderLabel
 {
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [numberFormatter setCurrencySymbol:@""];
+    NSNumber* priceNumber = [[NSNumber alloc] init];
+    
     NSMutableArray *intFolderList = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"interiorFolders"]];
     if([intFolderList count]==0){
         [self setFirstTableDataSource:[[NSArray alloc]init]];
@@ -231,8 +253,10 @@ int const LINESPACE = 25;
         //set column 4
         double partPrice = [self getPriceByCategory:categoryName :categoryValue];
         if(partPrice != 0.0){
-            label = [[UILabel alloc] initWithFrame:CGRectMake(700, i*LINESPACE + label_Y, 200, 20)];
-            [label setText:[NSString stringWithFormat:@"%.2f", partPrice]];
+            label = [[UILabel alloc] initWithFrame:CGRectMake(700, i*LINESPACE + label_Y, 100, 20)];
+            priceNumber = [NSNumber numberWithDouble:partPrice];
+            label.textAlignment = NSTextAlignmentRight;
+            [label setText:[numberFormatter stringFromNumber:priceNumber]];
             [self.scrollView addSubview:label];
             interiorPrice = interiorPrice + partPrice;
         }
@@ -241,6 +265,11 @@ int const LINESPACE = 25;
 }
 - (void)setInteriorFileLabel
 {
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [numberFormatter setCurrencySymbol:@""];
+    NSNumber* priceNumber = [[NSNumber alloc] init];
+    
     NSMutableArray *intFile = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"interiorFiles"]];
     NSMutableArray *intFolderList = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"interiorFolders"]];
     
@@ -282,8 +311,10 @@ int const LINESPACE = 25;
         
         partPrice = [self getPriceByDetail:detailName :detailValue];
         if(partPrice !=0.0){
-            label = [[UILabel alloc] initWithFrame:CGRectMake(700, i*LINESPACE + label_Y, 200, 20)];
-            [label setText:[NSString stringWithFormat:@"%.2f", partPrice]];
+            label = [[UILabel alloc] initWithFrame:CGRectMake(700, i*LINESPACE + label_Y, 100, 20)];
+            priceNumber = [NSNumber numberWithDouble:partPrice];
+            label.textAlignment = NSTextAlignmentRight;
+            [label setText:[numberFormatter stringFromNumber:priceNumber]];
             [self.scrollView addSubview:label];
             interiorPrice2 = interiorPrice2 + partPrice;
         }
@@ -295,6 +326,11 @@ int const LINESPACE = 25;
 
 - (void)setOptionsAccessoriesFolderLabel
 {
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [numberFormatter setCurrencySymbol:@""];
+    NSNumber* priceNumber = [[NSNumber alloc] init];
+    
     NSMutableArray *intFolderList = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"optionsAccessoriesFolders"]];
     NSMutableArray *oaFile = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] objectForKey:@"optionsAccessoriesFiles"]];
     
@@ -344,9 +380,11 @@ int const LINESPACE = 25;
     label.font = [UIFont boldSystemFontOfSize:16.0f];
     [self.scrollView addSubview:label];
     
-    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y + 40, 200, 20)];
+    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y + 40, 100, 20)];
     label.font = [UIFont boldSystemFontOfSize:16.0f];
-    [label setText:[NSString stringWithFormat:@"%.2f",(exteriorPrice+exteriorPrice2+interiorPrice+interiorPrice2)]];
+    priceNumber = [NSNumber numberWithDouble:(exteriorPrice+exteriorPrice2+interiorPrice+interiorPrice2)];
+    label.textAlignment = NSTextAlignmentRight;
+    [label setText:[numberFormatter stringFromNumber:priceNumber]];
     [self.scrollView addSubview:label];
     
     lastExtLabel_Y = lastExtLabel_Y +80;
@@ -383,6 +421,11 @@ int const LINESPACE = 25;
 }
 
 -(void)setOtherCost{
+    NSNumberFormatter* numberFormatter = [[NSNumberFormatter alloc]init];
+    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [numberFormatter setCurrencySymbol:@""];
+    NSNumber* priceNumber = [[NSNumber alloc] init];
+    
     otherPrice = 0.0;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *selectedCarJSON;
@@ -400,10 +443,12 @@ int const LINESPACE = 25;
     label = [[UILabel alloc] initWithFrame:CGRectMake(10, lastExtLabel_Y, 200, 20)];
     [label setText:@"Road Tax"];
     [self.scrollView addSubview:label];
-    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 200, 20)];
     partPrice = [[selectedCarJSON valueForKey:@"Road Tax"]doubleValue];
     if(partPrice != 0.0){
-        [label setText:[NSString stringWithFormat:@"%.2f",partPrice]];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 100, 20)];
+        priceNumber = [NSNumber numberWithDouble:partPrice];
+        label.textAlignment = NSTextAlignmentRight;
+        [label setText:[numberFormatter stringFromNumber:priceNumber]];
         [self.scrollView addSubview:label];
         otherPrice = otherPrice + partPrice;
     }
@@ -412,10 +457,12 @@ int const LINESPACE = 25;
     label = [[UILabel alloc] initWithFrame:CGRectMake(10, lastExtLabel_Y, 200, 20)];
     [label setText:@"NUmber Plate"];
     [self.scrollView addSubview:label];
-    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 200, 20)];
+    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 100, 20)];
     partPrice = [[selectedCarJSON valueForKey:@"Number Plate"]doubleValue];
     if(partPrice != 0.0){
-        [label setText:[NSString stringWithFormat:@"%.2f",partPrice]];
+        priceNumber = [NSNumber numberWithDouble:partPrice];
+        label.textAlignment = NSTextAlignmentRight;
+        [label setText:[numberFormatter stringFromNumber:priceNumber]];
         [self.scrollView addSubview:label];
         otherPrice = otherPrice + partPrice;
     }
@@ -424,10 +471,12 @@ int const LINESPACE = 25;
     label = [[UILabel alloc] initWithFrame:CGRectMake(10, lastExtLabel_Y, 200, 20)];
     [label setText:@"Insurance Premium"];
     [self.scrollView addSubview:label];
-    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 200, 20)];
+    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 100, 20)];
     partPrice = [[selectedCarJSON valueForKey:@"Insurance Premium"]doubleValue];
     if(partPrice != 0.0){
-        [label setText:[NSString stringWithFormat:@"%.2f",partPrice]];
+        priceNumber = [NSNumber numberWithDouble:partPrice];
+        label.textAlignment = NSTextAlignmentRight;
+        [label setText:[numberFormatter stringFromNumber:priceNumber]];
         [self.scrollView addSubview:label];
         otherPrice = otherPrice + partPrice;
     }
@@ -438,8 +487,10 @@ int const LINESPACE = 25;
     [self.scrollView addSubview:label];
     partPrice = [[selectedCarJSON valueForKey:@"Registration Fee"]doubleValue];
     if(partPrice != 0.0){
-        label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 200, 20)];
-        [label setText:[NSString stringWithFormat:@"%.2f",partPrice]];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 100, 20)];
+        priceNumber = [NSNumber numberWithDouble:partPrice];
+        label.textAlignment = NSTextAlignmentRight;
+        [label setText:[numberFormatter stringFromNumber:priceNumber]];
         [self.scrollView addSubview:label];
         otherPrice = otherPrice + partPrice;
     }
@@ -451,8 +502,10 @@ int const LINESPACE = 25;
     [self.scrollView addSubview:label];
     partPrice = [[selectedCarJSON valueForKey:@"Handling Inspection"]doubleValue];
     if(partPrice != 0.0){
-        label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 200, 20)];
-        [label setText:[NSString stringWithFormat:@"%.2f",partPrice]];
+        label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 100, 20)];
+        priceNumber = [NSNumber numberWithDouble:partPrice];
+        label.textAlignment = NSTextAlignmentRight;
+        [label setText:[numberFormatter stringFromNumber:priceNumber]];
         [self.scrollView addSubview:label];
         otherPrice = otherPrice + partPrice;
     }
@@ -463,9 +516,11 @@ int const LINESPACE = 25;
     [label setText:@"Total on the road, incl Reg Fee, 12 months Road Tax, No Plates, Insurance"];
     [self.scrollView addSubview:label];
     
-    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 600, 20)];
+    label = [[UILabel alloc] initWithFrame:CGRectMake(700, lastExtLabel_Y, 100, 20)];
     label.font = [UIFont boldSystemFontOfSize:16.0f];
-    [label setText:[NSString stringWithFormat:@"%.2f",(exteriorPrice+exteriorPrice2+interiorPrice+interiorPrice2+otherPrice)]];
+    priceNumber = [NSNumber numberWithDouble:(exteriorPrice+exteriorPrice2+interiorPrice+interiorPrice2+otherPrice)];
+    label.textAlignment = NSTextAlignmentRight;
+    [label setText:[numberFormatter stringFromNumber:priceNumber]];
     [self.scrollView addSubview:label];
     
 }
@@ -508,8 +563,8 @@ int const LINESPACE = 25;
     
     [self.scrollView setContentSize:CGSizeMake(768, 2000)];
     
-    UIImageView *imvLogo = [[UIImageView alloc] initWithFrame:CGRectMake(384, 10, 200, 50)];
-    imvLogo.image = [UIImage imageNamed:@"aml_logo_72.png"];
+    UIImageView *imvLogo = [[UIImageView alloc] initWithFrame:CGRectMake(384, 10, 100, 10)];
+    imvLogo.image = [UIImage imageNamed:@"aml_logo_96.png"];
     [self.scrollView addSubview:imvLogo];
     
     UILabel *quatationLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 80, 200, 20)];
@@ -543,7 +598,7 @@ int const LINESPACE = 25;
     for(UIView *view in [self.scrollView subviews])
         [view removeFromSuperview];
     
-    UIImageView *iv = [[UIImageView alloc]initWithFrame:CGRectMake(400, 10, 200, 100)];
+    UIImageView *iv = [[UIImageView alloc]initWithFrame:CGRectMake(400, 10, 200, 50)];
     [iv setImage:[UIImage imageNamed:@"aml_logo_96"]];
     [self.scrollView addSubview:iv];
 }
@@ -588,6 +643,10 @@ int const LINESPACE = 25;
     controller.mailComposeDelegate = self;
     [self presentModalViewController:controller animated:YES];
     
+}
+
+- (IBAction)editUserInfo:(id)sender {
+    [self getName];
 }
 
 - (IBAction)generatePDF:(id)sender
@@ -787,6 +846,7 @@ int const LINESPACE = 25;
     [self setOptionsAccessoriesFolderLabel];
     //[self setOptionsAccessoriesFileLabel];
     [self setOtherCost];
+    [self setUserInfo];
     
 }
 
@@ -883,29 +943,70 @@ int const LINESPACE = 25;
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
-    if([title isEqualToString:@"OK"])
-    {
-        UITextField *username = [alertView textFieldAtIndex:0];
-        name = [username text];
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    if([alertView tag]==1){
+        NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+        if([title isEqualToString:@"OK"])
+        {
+            UITextField *username = [alertView textFieldAtIndex:0];
+            [defaults setObject:[username text] forKey:@"Username"];
+        }
+        [self getPhoneNumber];
     }
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, 500, 20)];
-    [nameLabel setText:[NSString stringWithFormat:@"Name of Customer: %@",name]];
+    else if([alertView tag]==2){
+        NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+        if([title isEqualToString:@"OK"])
+        {
+            UITextField *username = [alertView textFieldAtIndex:0];
+            [defaults setObject:[username text] forKey:@"UserPhoneNumber"];
+        }
+        [self setUserInfo];
+    }
+    
+    
+}
+-(void)getName
+{
+    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Name" message:@"Please enter your name:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [av setTag:1];
+    av.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [av setDelegate:self];
+    [av show];
+}
+
+-(void)getPhoneNumber
+{
+    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Phone Number" message:@"Please enter your phone number:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [av setTag:2];
+    av.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [av setDelegate:self];
+    [av show];
+}
+
+-(void)setUserInfo
+{
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 80, 500, 20)];
+    if([[defaults objectForKey:@"Username"]length]!=0)
+        [nameLabel setText:[NSString stringWithFormat:@"Name of Customer: %@",[defaults objectForKey:@"Username"]]];
+    else
+        [nameLabel setText:[NSString stringWithFormat:@"Name of Customer: %@",@""]];
+    [self.scrollView addSubview:nameLabel];
+    
+    nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 500, 20)];
+    if([[defaults objectForKey:@"UserPhoneNumber"]length]!=0)
+        [nameLabel setText:[NSString stringWithFormat:@"Phone Number of Customer: %@",[defaults objectForKey:@"UserPhoneNumber"]]];
+    else
+        [nameLabel setText:[NSString stringWithFormat:@"Phone Number of Customer: %@",@""]];
     [self.scrollView addSubview:nameLabel];
     
     NSDateFormatter *df = [[NSDateFormatter alloc]init];
     [df setDateFormat:@"dd MMM yyyy"];
     
-    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 140, 200, 20)];
+    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 120, 200, 20)];
     [dateLabel setText:[NSString stringWithFormat:@"Date: %@",[df stringFromDate:[NSDate date]]]];
     [self.scrollView addSubview:dateLabel];
-}
--(void)getName
-{
-    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Name" message:@"Please enter your name:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    av.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [av setDelegate:self];
-    [av show];
 }
 -(double)getCarBasePrice{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

@@ -91,7 +91,7 @@
         else if([folder isEqualToString:@"Caliper Colour"])
         {
             [self.imvCaliperColour setHidden:NO];
-            beginsWithRequirement = [NSString stringWithFormat:@"%@_ext_Brake Calipers_Red",name];
+            beginsWithRequirement = [NSString stringWithFormat:@"%@_ext_Caliper Colour_Red",name];
             predicate = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[cd] %@", beginsWithRequirement];
             subArray = [directoryContents filteredArrayUsingPredicate:predicate];
             [self.imvCaliperColour setImage:[UIImage imageNamed:[subArray objectAtIndex:0]]];
